@@ -67,8 +67,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Imagenes\9788445000663_1.jpg" />
-    <Content Include="Assets\Imagenes\9788498382662_szdiiojfx9dqxhwn.jpg" />
+    <Content Include="Assets\Imagenes\1.jpg" />
+    <Content Include="Assets\Imagenes\2.jpg" />
+    <Content Include="SQLScripts\Crear tabla Compras.sql" />
+    <Content Include="SQLScripts\Crear tabla Libros.sql" />
+    <Content Include="SQLScripts\sp obtener compras.sql" />
+    <Content Include="SQLScripts\spgardar compra.sql" />
+    <Content Include="SQLScripts\SPobtenerlibros.sql" />
     <Content Include="Vistas\Mi_Carrito.aspx" />
     <Content Include="Vistas\Principal.aspx" />
     <Content Include="Web.config" />

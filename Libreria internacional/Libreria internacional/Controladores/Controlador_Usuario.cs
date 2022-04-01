@@ -11,6 +11,10 @@ namespace Libreria_internacional.Controladores
 {
     public class Controlador_Usuario
     {
+        //Apikey Leandro: "AIzaSyAT2RiFOdxrH_4u6qxilYARXTXcXHmTrM0";
+        //Apikey Juan Jose: "AIzaSyABqEs1pV-Jdgyio1SVy0yPo7tkFyOtnRo";
+        //Apikey Jose: "AIzaSyBihpSV3YmGWIjLrbOzjEShaZfaA08Cr5M";
+
         const string firebaseUrl = "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=";
         const string apiKey = "AIzaSyABqEs1pV-Jdgyio1SVy0yPo7tkFyOtnRo";
 
