@@ -71,8 +71,8 @@
     <Content Include="Assets\Imagenes\2.jpg" />
     <Content Include="SQLScripts\Crear tabla Compras.sql" />
     <Content Include="SQLScripts\Crear tabla Libros.sql" />
-    <Content Include="SQLScripts\sp obtener compras.sql" />
-    <Content Include="SQLScripts\spgardar compra.sql" />
+    <Content Include="SQLScripts\spGuardar compra.sql" />
+    <Content Include="SQLScripts\spObtener compras.sql" />
     <Content Include="SQLScripts\SPobtenerlibros.sql" />
     <Content Include="Vistas\Mi_Carrito.aspx" />
     <Content Include="Vistas\Principal.aspx" />
