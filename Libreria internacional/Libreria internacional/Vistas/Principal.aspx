@@ -30,7 +30,7 @@
                             <a class="nav-link active" aria-current="page" href="Mi_Carrito.aspx">Mi carrito</a>
                         </li>
                         <li class="nav-item" id="Reservaciones" runat="server" hidden="hidden">
-                            <a class="nav-link" href="reservaciones.aspx">Mis reservaciones</a>
+                            <a class="nav-link" href="Mis_Compras.aspx">Mis Compras</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Contactenos</a>
@@ -39,7 +39,7 @@
                             <a class="nav-link active" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">iniciar sesion</a>
                         </li>
                         <li class="nav-item" id="CerrarSesion" runat="server" hidden="hidden">
-                            <a class="nav-link" runat="server" onserverclick="CerrarSesion_Click">Cerrar sesión</a>
+                            <a class="nav-link" runat="server" onserverclick="CerrarSesion_Click">Cerrar sesion</a>
                         </li>
                 </div>
             </div>
@@ -101,7 +101,7 @@
                                 <label id="lblName" runat="server"></label>
                             </h5>
                             <p class="text-secondary mb-1">Senior Software Engineer</p>
-                            <p class="text-muted font-size-sm">Ciudad Colón, Mora</p>
+                            <p class="text-muted font-size-sm">Ciudad Colon, Mora</p>
                         </div>
                     </div>
                 </div>

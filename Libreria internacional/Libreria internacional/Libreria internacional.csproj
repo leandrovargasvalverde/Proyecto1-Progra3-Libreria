@@ -71,10 +71,11 @@
     <Content Include="Assets\Imagenes\2.jpg" />
     <Content Include="SQLScripts\Crear tabla Compras.sql" />
     <Content Include="SQLScripts\Crear tabla Libros.sql" />
-    <Content Include="SQLScripts\Insert Libros.sql" />
+    <Content Include="SQLScripts\Insertar Libros.sql" />
     <Content Include="SQLScripts\spGuardar compra.sql" />
     <Content Include="SQLScripts\spObtener compras.sql" />
     <Content Include="SQLScripts\SPobtenerlibros.sql" />
+    <Content Include="Vistas\Mis_Compras.aspx" />
     <Content Include="Vistas\Mi_Carrito.aspx" />
     <Content Include="Vistas\Principal.aspx" />
     <Content Include="Web.config" />
@@ -88,6 +89,13 @@
     <Compile Include="Modelos\Modelo_libros.cs" />
     <Compile Include="Modelos\Modelo_Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\Mis_Compras.aspx.cs">
+      <DependentUpon>Mis_Compras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Mis_Compras.aspx.designer.cs">
+      <DependentUpon>Mis_Compras.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Mi_Carrito.aspx.cs">
       <DependentUpon>Mi_Carrito.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
