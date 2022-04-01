@@ -75,8 +75,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base_de_datos\Conexion_base.cs" />
+    <Compile Include="Controladores\Controlador_Compras.cs" />
     <Compile Include="Controladores\Controlador_libros.cs" />
     <Compile Include="Controladores\Controlador_Usuario.cs" />
+    <Compile Include="Modelos\Modelo_Compras.cs" />
     <Compile Include="Modelos\Modelo_libros.cs" />
     <Compile Include="Modelos\Modelo_Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

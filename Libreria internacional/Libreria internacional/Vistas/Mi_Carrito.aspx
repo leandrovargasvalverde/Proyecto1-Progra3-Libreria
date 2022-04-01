@@ -18,20 +18,20 @@
                    
             lblMontoHospedaje.innerText = monto;
 
-            lblMontoHospedajeFinal.innerText = (monto+ 4000);
+            lblMontoFinal.innerText = (monto+ 4000);
         }
 
         function CalcularMontoNocheDetalle() {
             const lblMontoconIVA = document.querySelector("#lblMontoconIVA");
-            const lblMontoNoche = document.querySelector("#lblMontoNoche");
-            const intAdultos = document.querySelector("#intAdultos");
-            const montoNoche = parseInt(lblMontoNoche.innerText);
+            const lblMontoUnidad = document.querySelector("#lblMontoUnidad");
+            const intLibros = document.querySelector("#intLibros");
+            const montoNoche = parseInt(lblMontoUnidad.innerText);
             const lblMontosinIVA = document.querySelector("#lblMontosinIVA");
 
-            if (intAdultos.value >1 ) {
+            if (intLibros.value >1 ) {
                 var impuesto = (montoNoche * 0.13);
-                lblMontoconIVA.innerText = (montoNoche + impuesto) * intAdultos.value;
-                lblMontosinIVA.innerText = montoNoche  * intAdultos.value;
+                lblMontoconIVA.innerText = (montoNoche + impuesto) * intLibros.value;
+                lblMontosinIVA.innerText = montoNoche * intLibros.value;
             }
             else {
                 lblMontoconIVA.innerText = montoNoche;
@@ -71,30 +71,30 @@
                 </div>
             </div>
         </nav>
-    </form>
+        <div id="divAlert" hidden="hidden" role="alert" runat="server">
+            <label id="lblAlert" runat="server"></label>
+        </div>
+        <div class="container-fluid ml-3" style="margin-top: 10%">
+            <div class="row">
+                <asp:Repeater ID="Rep_Carrito" runat="server">
+                    <ItemTemplate>
+                        <div class="card" style="max-width: 20%; margin-right: 2%">
+                            <img src="<%# Eval("Foto") %>" class="card-img-top" />
+                            <div class="card-body">
+                                <h5 class="card-title"><%# Eval("Titulo") %></h5>
+                                <p class="card-text">Autor: <%# Eval("Autor") %></p>
+                                <p class="card-text">Fecha de publicacion: <%# Eval("Fecha_de_publicacion") %></p>
+                                <strong class="card-text">Precio: ₡<%# Eval("Precio") %> / p</strong>
 
-
-    <div class="container-fluid ml-3" style="margin-top: 10%">
-        <div class="row">
-            <asp:Repeater ID="Rep_Carrito" runat="server">
-                <ItemTemplate>
-                    <div class="card" style="max-width: 20%; margin-right: 2%">
-                        <img src="<%# Eval(" Foto") %>" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title"><%# Eval("Titulo") %></h5>
-                            <p class="card-text">Autor: <%# Eval("Autor") %></p>
-                            <p class="card-text">Fecha de publicacion: <%# Eval("Fecha_de_publicacion") %></p>
-                            <strong class="card-text">Precio: ₡<%# Eval("Precio") %> / p</strong>
-
+                            </div>
                         </div>
-                    </div>
-                </ItemTemplate>
-            </asp:Repeater>
-            <div class="card" style="width: 30rem; margin-left: 2%">
+                    </ItemTemplate>
+                </asp:Repeater>
+                <div class="card" style="width: 30rem; margin-left: 2%">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
-                                <h5 class="card-title"><strong>Unidad ₡<label id="lblMontoNoche" runat="server"></label></strong></h5>
+                                <h5 class="card-title"><strong>Unidad ₡<label id="lblMontoUnidad" runat="server"></label></strong></h5>
                             </div>
                             <div class="col">
                                 <h6 class="card-subtitle mb-2 text-muted" style="float: right">4.95 · 97 reseñas</h6>
@@ -104,44 +104,56 @@
                         <div class="row mb-2">
                             <div class="col">
                                 Dia de la compra<br />
-                                <input runat="server" type="date" class="form-control" id="dtLlegada" readonly   />
+                                <input runat="server" type="date" class="form-control" id="dt_Dia_Compra" readonly />
                             </div>
                             <div class="col">
                                 Llegada de la compra<br />
-                                <input runat="server" type="date" class="form-control" id="dtSalida" readonly  />
+                                <input runat="server" type="date" class="form-control" id="dt_Llegad_Compra" readonly />
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col">
                                 Cantidad de libros
                                 <br />
-                                <input runat="server" type="number" class="form-control" id="intAdultos" min="1" max="10" onclick="CalcularMontoNocheDetalle()" />
+                                <input runat="server" type="number" class="form-control" id="intLibros" min="1" max="10" onclick="CalcularMontoNocheDetalle()" />
                             </div>
 
                         </div>
-                         <div class="row mb-2">
-                            <div class="col"><u>Precio sin IVA</div><div class="col text-end">₡ <label runat="server" id="lblMontosinIVA"></label></div>
+                        <div class="row mb-2">
+                            <div class="col"><u>Precio sin IVA</div>
+                            <div class="col text-end">₡
+                                <label runat="server" id="lblMontosinIVA"></label>
+                            </div>
                         </div>
                         <div class="row mb-2">
-                            <div class="col"><u>Precio incluyendo IVA</div><div class="col text-end">₡ <label runat="server" id="lblMontoconIVA"></label></div>
+                            <div class="col"><u>Precio incluyendo IVA</div>
+                            <div class="col text-end">₡
+                                <label runat="server" id="lblMontoconIVA"></label>
+                            </div>
                         </div>
-                       
-                        
-                        
+
+
+
                         <hr />
                         <div class="row mb-2">
                             <div class="col"><strong>Total</strong> </div>
-                            <div class="col text-end"><strong>₡ <label runat="server" id="lblMontoHospedajeFinal"></label></strong></div>
+                            <div class="col text-end"><strong>₡
+                                <label runat="server" id="lblMontoFinal"></label>
+                            </strong></div>
                         </div>
                         <hr />
                         <div class="row mb-2">
                             <div class="col mb-2">
-                                <button runat="server" id="btnGuardarReservacion" class="btn btn-primary" >Reservar</button>
+                                <button runat="server" id="btnGuardarReservacion" class="btn btn-primary" onserverclick="Btn_Guardar_Compra_Click">Reservar</button>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
-    </div>
+    </form>
+
+
+
 </body>
 </html>

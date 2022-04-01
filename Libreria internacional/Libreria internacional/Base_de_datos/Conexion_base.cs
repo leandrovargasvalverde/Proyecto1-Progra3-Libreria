@@ -46,4 +46,32 @@ using System.Web;
                 throw ex; //Devuelve un error
             }
         }
-    }
+        public static void executeQuery(string procedure, List<SqlParameter> param)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(strConexion)) //Creacion del objeto que se conecta a SQL
+                {
+                    conn.Open(); //Comando que abre la conexión a SQL
+                    SqlCommand cmd = new SqlCommand(); //Creando el objeto comando SQL
+                    cmd.CommandText = procedure; // Le digo al comando que es un Stored Procedure
+                    cmd.CommandType = CommandType.StoredProcedure; // Le digo al comando que es de tipo Stored Procedure
+                    cmd.Connection = conn; // Le digo al comando que su conexion es mi variable conn
+
+                    if (param != null)
+                    {
+                        foreach (SqlParameter item in param)
+                        {
+                            cmd.Parameters.Add(item);
+                        }
+                    }
+
+                    cmd.ExecuteNonQuery(); // Le digo al comando que se ejecute en el SQL                
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex; //Devuelve un error
+            }
+        }
+}

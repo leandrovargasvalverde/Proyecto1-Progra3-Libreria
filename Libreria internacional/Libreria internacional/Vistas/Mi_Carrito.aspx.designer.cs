@@ -24,6 +24,24 @@ namespace Libreria_internacional.Vistas
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// Control divAlert.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divAlert;
+
+        /// <summary>
+        /// Control lblAlert.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblAlert;
+
+        /// <summary>
         /// Control Rep_Carrito.
         /// </summary>
         /// <remarks>
@@ -33,40 +51,40 @@ namespace Libreria_internacional.Vistas
         protected global::System.Web.UI.WebControls.Repeater Rep_Carrito;
 
         /// <summary>
-        /// Control lblMontoNoche.
+        /// Control lblMontoUnidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblMontoNoche;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblMontoUnidad;
 
         /// <summary>
-        /// Control dtLlegada.
+        /// Control dt_Dia_Compra.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl dtLlegada;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl dt_Dia_Compra;
 
         /// <summary>
-        /// Control dtSalida.
+        /// Control dt_Llegad_Compra.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl dtSalida;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl dt_Llegad_Compra;
 
         /// <summary>
-        /// Control intAdultos.
+        /// Control intLibros.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl intAdultos;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl intLibros;
 
         /// <summary>
         /// Control lblMontosinIVA.
@@ -87,13 +105,13 @@ namespace Libreria_internacional.Vistas
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblMontoconIVA;
 
         /// <summary>
-        /// Control lblMontoHospedajeFinal.
+        /// Control lblMontoFinal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblMontoHospedajeFinal;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblMontoFinal;
 
         /// <summary>
         /// Control btnGuardarReservacion.
