@@ -1,7 +1,7 @@
 USE [Base_Libros]
 GO
 
-/****** Object:  Table [dbo].[Taba_Libros]    Script Date: 30/3/2022 23:06:38 ******/
+/****** Object:  Table [dbo].[Tabla_Libros]    Script Date: 1/4/2022 14:40:16 ******/
 SET ANSI_NULLS ON
 GO
 
