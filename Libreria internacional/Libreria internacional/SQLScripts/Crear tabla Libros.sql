@@ -8,7 +8,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[Taba_Libros](
+CREATE TABLE [dbo].[Tabla_Libros](
 	[ISBN] [int] IDENTITY(1,1) NOT NULL,
 	[Foto] [varchar](200) NULL,
 	[Titulo] [varchar](200) NULL,
