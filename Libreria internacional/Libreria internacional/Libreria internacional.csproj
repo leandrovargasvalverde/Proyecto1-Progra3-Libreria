@@ -69,12 +69,12 @@
   <ItemGroup>
     <Content Include="Assets\Imagenes\1.jpg" />
     <Content Include="Assets\Imagenes\2.jpg" />
-    <Content Include="SQLScripts\Crear tabla Compras.sql" />
-    <Content Include="SQLScripts\Crear tabla Libros.sql" />
-    <Content Include="SQLScripts\Insertar Libros.sql" />
-    <Content Include="SQLScripts\spGuardar compra.sql" />
-    <Content Include="SQLScripts\spObtener compras.sql" />
-    <Content Include="SQLScripts\SPobtenerlibros.sql" />
+    <Content Include="SQLScripts\Crear tabla Compras 3.sql" />
+    <Content Include="SQLScripts\Crear tabla Libros 1.sql" />
+    <Content Include="SQLScripts\Insertar Libros 2.sql" />
+    <Content Include="SQLScripts\SP Guardar compras 5.sql" />
+    <Content Include="SQLScripts\SP Obtener Compras 6.sql" />
+    <Content Include="SQLScripts\SP Obtener libros 4.sql" />
     <Content Include="Vistas\Mis_Compras.aspx" />
     <Content Include="Vistas\Mi_Carrito.aspx" />
     <Content Include="Vistas\Principal.aspx" />

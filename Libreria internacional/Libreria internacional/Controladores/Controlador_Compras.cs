@@ -44,13 +44,16 @@ namespace Libreria_internacional.Controladores
                     ID = Convert.ToInt16(dr["ID"]) ,
                     Correo = dr["Correo"].ToString(),
                     Cantidad_libros = Convert.ToInt16(dr["Cantidad_libros"]),
-                    Fecha_compra = Convert.ToDateTime(dr["Fecha_compra"]),
-                    Fecha_llegada_compra =Convert.ToDateTime(dr["Fecha_llegada_compra"]),
+                    Fecha_compra = Convert.ToDateTime(dr["Fecha_compra"]).ToShortDateString(),
+                    Fecha_llegada_compra = Convert.ToDateTime(dr["Fecha_llegada_compra"]).ToShortDateString(),
                     Monto_con_IVA = Convert.ToInt32(dr["Monto_con_IVA"]),
                     Monto_final = Convert.ToInt32(dr["Monto_sin_IVA"]),
                     Monto_sin_IVA = Convert.ToInt32(dr["Monto_final"]),
                     Monto_Unidad = Convert.ToInt32(dr["Monto_Unidad"]),
-                    //Foto= dr ["Foto"].ToString(),
+                    Foto=dr["Foto"].ToString(),
+                    Titulo =dr["Titulo"].ToString(),
+                    
+                    
                  };
        
  

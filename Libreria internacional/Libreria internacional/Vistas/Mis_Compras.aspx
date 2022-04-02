@@ -41,24 +41,30 @@
             </div>
         </nav>
 
-          <div class="container-fluid ml-3" style="margin-top: 10%">
+          <div class="container-fluid ml-3" style="margin-top: 5%">
             <div class="row">
                 <asp:Repeater ID="Rep_Compras" runat="server">
                     <ItemTemplate>
-                        <div class="card" style="max-width: 20%; margin-right: 2%">
-                            
-                            <div class="card-body">
-                                <h5 class="card-title"><%# Eval("Correo") %></h5>
-                                <p class="card-text">Autor: <%# Eval("Cantidad_libros") %></p>
-                                <p class="card-text">Autor: <%# Eval("Fecha_compra") %></p>
-                                <p class="card-text">Autor: <%# Eval("Fecha_llegada_compra") %></p>
-                                <p class="card-text">Autor: <%# Eval("Monto_con_IVA") %></p>
-                                <p class="card-text">Autor: <%# Eval("Monto_sin_IVA") %></p>
-                                <p class="card-text">Autor: <%# Eval("Monto_final") %></p>
-                                <p class="card-text">Autor: <%# Eval("Monto_Unidad") %></p>
-              
+                        <div class="card mb-3" style="max-width: 30%;max-height:30%; margin-right:2%">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img Style="margin-top: 10%" src=" <%# Eval("Foto") %>" class="img-fluid rounded-start">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title"style="font-size:medium">Titulo:  <%# Eval("Titulo") %></h5>
+                                        <p style="font-size:small"  class="card-text">Precio por unidad:  ₡<%# Eval("Monto_Unidad") %></p>
+                                        <p style="font-size:small"  class="card-text">Cantidad de libros:  <%# Eval("Cantidad_libros") %></p>
+                                        <p style="font-size:small"  class="card-text">Fecha de la compra:  <%# Eval("Fecha_compra") %></p>
+                                        <p style="font-size:small"  class="card-text">Fecha de llegada de la compra:  <%# Eval("Fecha_llegada_compra") %></p>
+                                        <p style="font-size:small"  class="card-text">Monto Con IVA:  ₡<%# Eval("Monto_con_IVA") %></p>
+                                        <p style="font-size:small"  class="card-text">Monto Con IVA:  ₡<%# Eval("Monto_sin_IVA") %></p>
+                                        <p style="font-size:small"  class="card-text">Monto total:  ₡<%# Eval("Monto_final") %></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    
                     </ItemTemplate>
                 </asp:Repeater>
             </div>
