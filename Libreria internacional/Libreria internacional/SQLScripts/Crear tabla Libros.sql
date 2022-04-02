@@ -1,3 +1,5 @@
+CREATE DATABASE "Base_Libros"
+
 USE [Base_Libros]
 GO
 
@@ -17,5 +19,4 @@ CREATE TABLE [dbo].[Tabla_Libros](
 	[Precio] [money] NULL
 ) ON [PRIMARY]
 GO
-
 

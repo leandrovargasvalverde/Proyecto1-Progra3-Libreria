@@ -40,4 +40,4 @@ BEGIN
            ,@Monto_final
            ,@Monto_Unidad)
 END
-go
+GO
