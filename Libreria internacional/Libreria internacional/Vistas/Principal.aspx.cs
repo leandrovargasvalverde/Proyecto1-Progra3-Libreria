@@ -57,7 +57,7 @@ namespace Libreria_internacional.Vistas
         protected void CerrarSesion_Click(object sender, EventArgs e)
         {
             Session["Login"] = null;
-            MostrarAlert("Gratis por su visita");
+            MostrarAlert("Gracias por su visita");
             MostrarCardLogin();
             CerrarSesion.Attributes.Add("hidden", "hidden");
         }

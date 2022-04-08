@@ -68,7 +68,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Imagenes\1.jpg" />
+    <Content Include="Assets\Imagenes\10.jpg" />
+    <Content Include="Assets\Imagenes\11.jpg" />
+    <Content Include="Assets\Imagenes\12.jpg" />
+    <Content Include="Assets\Imagenes\13.jpg" />
     <Content Include="Assets\Imagenes\2.jpg" />
+    <Content Include="Assets\Imagenes\3.jpg" />
+    <Content Include="Assets\Imagenes\4.jpg" />
+    <Content Include="Assets\Imagenes\5.jpg" />
+    <Content Include="Assets\Imagenes\6.jpg" />
+    <Content Include="Assets\Imagenes\7.jpg" />
+    <Content Include="Assets\Imagenes\8.jpg" />
+    <Content Include="Assets\Imagenes\9.jpg" />
+    <Content Include="Assets\Imagenes\fondo.jpg" />
     <Content Include="Assets\Imagenes\logo.png" />
     <Content Include="SQLScripts\Crear tabla Compras.sql" />
     <Content Include="SQLScripts\Crear tabla Libros.sql" />

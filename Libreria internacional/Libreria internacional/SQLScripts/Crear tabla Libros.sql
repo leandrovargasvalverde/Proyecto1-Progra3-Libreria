@@ -16,7 +16,7 @@ CREATE TABLE [dbo].[Tabla_Libros](
 	[Titulo] [varchar](200) NULL,
 	[Autor] [varchar](200) NULL,
 	[Fecha_de_publicacion] [varchar](50) NULL,
-	[Precio] [money] NULL
+	[Precio] [money] NULL,
 ) ON [PRIMARY]
 GO
 

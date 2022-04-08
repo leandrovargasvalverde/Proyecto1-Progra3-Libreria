@@ -6,7 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 
@@ -16,7 +16,6 @@
         body {
             background-size: 100%;
             background-image: url("https://previews.123rf.com/images/zinako/zinako1708/zinako170801291/85308977-fun-seamless-pattern-with-cartoon-books-can-be-used-for-wallpaper-pattern-fills-greeting-cards-webpa.jpg");
-            background-repeat: no-repeat;
             width: 100vw;
             height: 100vh;
             position: absolute;
@@ -47,7 +46,7 @@
                             <a class="nav-link active" aria-current="page" href="#">Contactenos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">iniciar sesion</a>
+                            <a class="nav-link active" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Iniciar sesion</a>
                         </li>
                         <li class="nav-item" id="CerrarSesion" runat="server" hidden="hidden">
                             <a class="nav-link" runat="server" onserverclick="CerrarSesion_Click">Cerrar sesion</a>
@@ -55,21 +54,21 @@
                 </div>
             </div>
         </nav>
-        <div align="center">
-            <img src="../Assets/Imagenes/logo.png"></div>
 
         <div id="divAlert" hidden="hidden" role="alert" runat="server">
             <label id="lblAlert" runat="server"></label>
         </div>
 
+        <div align="center">
+            <img src="../Assets/Imagenes/logo.png" />
+        </div>
 
-
-        <div class="container-fluid ml-3" style="margin-top: 3%">
+        <div class="container-fluid ml-3" style="margin-top: 0,5%">
             <div class="row">
                 <asp:Repeater ID="Rep_Libros" runat="server">
                     <ItemTemplate>
-                        <div class="card" style="max-width: 20%; margin-right: 1%">
-                            <img src="<%# Eval(" Foto") %>" class="card-img-top" style="margin-top: 5%">
+                        <div class="card" style="max-width: 14%; margin-right: 2%; margin-left: 2%; margin-top: 3%">
+                            <img src="<%# Eval(" Foto") %>" class="card-img-top" style="margin-top: 5%; width: 100%; height: 100%">
                             <div class="card-body">
                                 <h5 class="card-title"><%# Eval("Titulo") %></h5>
                                 <p class="card-text">Autor: <%# Eval("Autor") %></p>
@@ -83,8 +82,9 @@
                 </asp:Repeater>
             </div>
         </div>
-
-
+        <br />
+        <br />
+        <br />
         <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasScrollingLabel">
             <div class="offcanvas-header primary-color">
                 <strong class="card-text" style="font-size: 150%; background-color: aqua; border-radius: 2%">Libreria Internacional  </strong>
