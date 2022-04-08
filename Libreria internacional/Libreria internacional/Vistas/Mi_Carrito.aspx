@@ -127,19 +127,47 @@
                         </div>
                         <div class="row mb-2">
                             <div class="col"><u>Precio incluyendo IVA</div>
-                            <div class="col text-end">₡
+                            <div class="col text-end">
+                                ₡
                                 <label runat="server" id="lblMontoconIVA"></label>
                             </div>
                         </div>
+                        <hr />
+                        <div class="row mb-2">
+                            <div class="col"style="margin-left:30%"><u>Ingreso de datos:</div>
 
+                            <div class="input-group mb-3">
+                             <input runat="server" id="INP_Nombre" type="text" class="form-control" placeholder="Nombre"  aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                             <input runat="server" id="Text1" type="text" class="form-control" placeholder="Provincia"  aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                             <input runat="server" id="Text2" type="text" class="form-control" placeholder="Direccion de entrega"  aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                             <input runat="server" id="Text3" type="text" class="form-control" placeholder="Codigo postal"  aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                             <input runat="server" id="Text4" type="text" class="form-control" placeholder="Numero de tarjeta"  aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                             <input runat="server" id="Text5" type="text" class="form-control" placeholder="Fecha de expiracion"  aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                             <input runat="server" id="Text6" type="text" class="form-control" placeholder="Codigo de seguridad "  aria-describedby="basic-addon1">
+                            </div>
+                        </div>
 
 
                         <hr />
                         <div class="row mb-2">
                             <div class="col"><strong>Total</strong> </div>
-                            <div class="col text-end"><strong>₡
+                            <div class="col text-end">
+                                <strong>₡
                                 <label runat="server" id="lblMontoFinal"></label>
-                            </strong></div>
+                                </strong>
+                            </div>
                         </div>
                         <hr />
                         <div class="row mb-2">

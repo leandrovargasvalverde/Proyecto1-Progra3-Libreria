@@ -59,7 +59,7 @@ namespace Libreria_internacional.Vistas
                     Monto_sin_IVA = Convert.ToInt32(lblMontosinIVA.InnerText),
                     Monto_final = Convert.ToInt32(lblMontoFinal.InnerText),
                     Monto_Unidad = Convert.ToInt32(lblMontoUnidad.InnerText),
-                    //Foto = 
+             
                 };
                 controlador.Controlador_Compras compras = new controlador.Controlador_Compras();
                 compras.Guardar_Compras(Compras);
