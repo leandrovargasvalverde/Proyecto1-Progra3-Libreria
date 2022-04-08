@@ -70,6 +70,7 @@ namespace Libreria_internacional.Vistas
             lblName.InnerText = usuario.Email;
             CerrarSesion.Attributes.Remove("hidden");
             Reservaciones.Attributes.Remove("hidden");
+            Favoritos.Attributes.Remove("hidden");
         }
         public void MostrarCardLogin()
         {
