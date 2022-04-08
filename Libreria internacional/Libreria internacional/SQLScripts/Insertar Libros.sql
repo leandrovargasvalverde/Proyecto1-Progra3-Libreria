@@ -24,6 +24,3 @@ VALUES
 ('\Assets\Imagenes\13.jpg','Alicia En El País De Las Maravillas','Lewis Carroll','2006' ,3500),
 ('\Assets\Imagenes\14.jpg','Contacto','Carl Sagan','2018' ,13800),
 ('\Assets\Imagenes\15.jpg','Percy Jackson Y Los Dioses Griegos','Rick Riordan','2015' ,14800)
-
-
-TRUNCATE TABLE Tabla_Libros
