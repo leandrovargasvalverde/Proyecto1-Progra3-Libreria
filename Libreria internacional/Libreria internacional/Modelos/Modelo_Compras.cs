@@ -17,5 +17,16 @@ namespace Libreria_internacional.Modelos
         public int Monto_sin_IVA { get; set; }
         public int Monto_final { get; set; }
         public int Monto_Unidad { get; set; }
+        public string Nombre { get; set; }
+        public string Pais { get; set; }
+        public string Estado { get; set; }
+        public string Direccion_de_entrega { get; set; }
+        public string Codigo_postal { get; set; }
+        public string Numero_de_tarjeta { get; set; }
+        public string Fecha_de_expiracion { get; set; }
+        public int Codigo_de_seguridad { get; set; }
+
+
+
     }
 }

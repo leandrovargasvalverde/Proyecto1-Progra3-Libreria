@@ -20,17 +20,13 @@ namespace Libreria_internacional.Vistas
                     Int16 Codigo = Convert.ToInt16(Request.QueryString["Codigo"]);
                     controlador.Controlador_libros Libros = new controlador.Controlador_libros();
                     List<modelo.Modelo_libros> lista_libros = Libros.Obtener_libros(Codigo);
-
-
                     lblMontoUnidad.InnerText = lista_libros[0].Precio.ToString();
-                 
                     lblMontoconIVA.InnerText = (lista_libros[0].Precio * 1).ToString();
                     lblMontoFinal.InnerText = (lista_libros[0].Precio * 1).ToString();
                     lblMontosinIVA.InnerText = (lista_libros[0].Precio * 1).ToString();
                     dt_Dia_Compra.Value = DateTime.Today.ToString("yyyy-MM-dd");
                     dt_Llegad_Compra.Value = DateTime.Now.AddDays(30).ToString("yyyy-MM-dd");
                     intLibros.Value = "1";
-                 
                     Rep_Carrito.DataSource = lista_libros;
                     Rep_Carrito.DataBind();
                 }
@@ -47,7 +43,7 @@ namespace Libreria_internacional.Vistas
             { 
                 Int16 Codigo_libros = Convert.ToInt16(Request.QueryString["Codigo"]);
                 modelo.Modelo_Usuarios Usuario = (modelo.Modelo_Usuarios)Session["Login"];
-                
+
                 modelo.Modelo_Compras Compras = new modelo.Modelo_Compras()
                 {
                     ID = Codigo_libros,
@@ -59,6 +55,14 @@ namespace Libreria_internacional.Vistas
                     Monto_sin_IVA = Convert.ToInt32(lblMontosinIVA.InnerText),
                     Monto_final = Convert.ToInt32(lblMontoFinal.InnerText),
                     Monto_Unidad = Convert.ToInt32(lblMontoUnidad.InnerText),
+                    Nombre = (INP_Nombre.Value),
+                    Pais= (INP_Pais.Value),
+                    Estado=(INP_Estado.Value),
+                    Direccion_de_entrega=(INP_Direccion_de_entrga.Value),
+                    Codigo_postal=(INP_Codigo_postal.Value),
+                    Numero_de_tarjeta=(INP_Numero_de_tarjeta.Value),
+                    Fecha_de_expiracion=(INP_Fecha_de_expiracion.Value),
+                    Codigo_de_seguridad= Convert.ToInt32(INP_Codigo_de_seguridad.Value),
              
                 };
                 controlador.Controlador_Compras compras = new controlador.Controlador_Compras();

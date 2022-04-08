@@ -13,7 +13,7 @@ namespace Libreria_internacional.Controladores
         public void Guardar_Compras(Modelo_Compras compra)
         {
             List<SqlParameter> param = new List<SqlParameter>();
-           // param.Add(new SqlParameter("@Foto", compra.Foto));
+
             param.Add(new SqlParameter("@Codigo_Libro", compra.ID));
             param.Add(new SqlParameter("@Correo", compra.Correo));
             param.Add(new SqlParameter("@Cantidad_libros", compra.Cantidad_libros));
@@ -23,8 +23,14 @@ namespace Libreria_internacional.Controladores
             param.Add(new SqlParameter("@Monto_sin_IVA", compra.Monto_sin_IVA));
             param.Add(new SqlParameter("@Monto_final", compra.Monto_final));
             param.Add(new SqlParameter("@Monto_Unidad", compra.Monto_Unidad));
-
-
+            param.Add(new SqlParameter("@Nombre", compra.Nombre));
+            param.Add(new SqlParameter("@Pais", compra.Pais));
+            param.Add(new SqlParameter("@Estado", compra.Estado));
+            param.Add(new SqlParameter("@Direccion_de_entrega", compra.Direccion_de_entrega));
+            param.Add(new SqlParameter("@Codigo_postal", compra.Codigo_postal));
+            param.Add(new SqlParameter("@Numero_de_tarjeta", compra.Numero_de_tarjeta));
+            param.Add(new SqlParameter("@Fecha_de_expiracion", compra.Fecha_de_expiracion));
+            param.Add(new SqlParameter("@Codigo_de_Seguridad", compra.Codigo_de_seguridad));
 
             Conexion_base.executeQuery("spGuardar_Compras", param);
         }
@@ -41,7 +47,7 @@ namespace Libreria_internacional.Controladores
             {
                 Modelo_Compras Compras = new Modelo_Compras()
                 {
-                    ID = Convert.ToInt16(dr["ID"]) ,
+                    ID = Convert.ToInt16(dr["ID"]),
                     Correo = dr["Correo"].ToString(),
                     Cantidad_libros = Convert.ToInt16(dr["Cantidad_libros"]),
                     Fecha_compra = Convert.ToDateTime(dr["Fecha_compra"]).ToShortDateString(),
@@ -50,14 +56,14 @@ namespace Libreria_internacional.Controladores
                     Monto_final = Convert.ToInt32(dr["Monto_sin_IVA"]),
                     Monto_sin_IVA = Convert.ToInt32(dr["Monto_final"]),
                     Monto_Unidad = Convert.ToInt32(dr["Monto_Unidad"]),
-                    Foto=dr["Foto"].ToString(),
-                    Titulo =dr["Titulo"].ToString(),
-                    
-                    
-                 };
-       
- 
-   
+                    Foto = dr["Foto"].ToString(),
+                    Titulo = dr["Titulo"].ToString(),
+
+
+                };
+
+
+
 
                 Lista_Compra.Add(Compras);
             }
@@ -68,4 +74,3 @@ namespace Libreria_internacional.Controladores
     }
 }
 
-       

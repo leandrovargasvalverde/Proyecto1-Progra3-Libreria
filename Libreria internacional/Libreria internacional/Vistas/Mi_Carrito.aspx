@@ -139,23 +139,26 @@
                             <div class="input-group mb-3">
                              <input runat="server" id="INP_Nombre" type="text" class="form-control" placeholder="Nombre"  aria-describedby="basic-addon1">
                             </div>
-                            <div class="input-group mb-3">
-                             <input runat="server" id="Text1" type="text" class="form-control" placeholder="Provincia"  aria-describedby="basic-addon1">
+                              <div class="input-group mb-3">
+                             <input runat="server" id="INP_Pais" type="text" class="form-control" placeholder="Pais"  aria-describedby="basic-addon1">
                             </div>
                             <div class="input-group mb-3">
-                             <input runat="server" id="Text2" type="text" class="form-control" placeholder="Direccion de entrega"  aria-describedby="basic-addon1">
+                             <input runat="server" id="INP_Estado" type="text" class="form-control" placeholder="Provincia"  aria-describedby="basic-addon1">
                             </div>
                             <div class="input-group mb-3">
-                             <input runat="server" id="Text3" type="text" class="form-control" placeholder="Codigo postal"  aria-describedby="basic-addon1">
+                             <input runat="server" id="INP_Direccion_de_entrga" type="text" class="form-control" placeholder="Direccion de entrega"  aria-describedby="basic-addon1">
                             </div>
                             <div class="input-group mb-3">
-                             <input runat="server" id="Text4" type="text" class="form-control" placeholder="Numero de tarjeta"  aria-describedby="basic-addon1">
+                             <input runat="server" id="INP_Codigo_postal" type="text" class="form-control" placeholder="Codigo postal"  aria-describedby="basic-addon1">
                             </div>
                             <div class="input-group mb-3">
-                             <input runat="server" id="Text5" type="text" class="form-control" placeholder="Fecha de expiracion"  aria-describedby="basic-addon1">
+                             <input runat="server" id="INP_Numero_de_tarjeta" type="text" class="form-control" placeholder="Numero de tarjeta"  aria-describedby="basic-addon1">
                             </div>
                             <div class="input-group mb-3">
-                             <input runat="server" id="Text6" type="text" class="form-control" placeholder="Codigo de seguridad "  aria-describedby="basic-addon1">
+                             <input runat="server" id="INP_Fecha_de_expiracion" type="text" class="form-control" placeholder="Fecha de expiracion"  aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                             <input runat="server" id="INP_Codigo_de_seguridad" type="text" class="form-control" placeholder="Codigo de seguridad "  aria-describedby="basic-addon1">
                             </div>
                         </div>
 
