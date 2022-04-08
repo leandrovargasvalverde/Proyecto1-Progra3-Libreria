@@ -114,67 +114,58 @@ namespace Libreria_internacional.Vistas
         protected global::System.Web.UI.HtmlControls.HtmlInputText INP_Nombre;
 
         /// <summary>
-        /// Control INP_Pais.
+        /// Control Text1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText INP_Pais;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Text1;
 
         /// <summary>
-        /// Control INP_Estado.
+        /// Control Text2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText INP_Estado;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Text2;
 
         /// <summary>
-        /// Control INP_Direccion_de_entrga.
+        /// Control Text3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText INP_Direccion_de_entrga;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Text3;
 
         /// <summary>
-        /// Control INP_Codigo_postal.
+        /// Control Text4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText INP_Codigo_postal;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Text4;
 
         /// <summary>
-        /// Control INP_Numero_de_tarjeta.
+        /// Control Text5.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText INP_Numero_de_tarjeta;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Text5;
 
         /// <summary>
-        /// Control INP_Fecha_de_expiracion.
+        /// Control Text6.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText INP_Fecha_de_expiracion;
-
-        /// <summary>
-        /// Control INP_Codigo_de_seguridad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText INP_Codigo_de_seguridad;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Text6;
 
         /// <summary>
         /// Control lblMontoFinal.
