@@ -80,6 +80,7 @@
     <Content Include="Assets\Imagenes\7.jpg" />
     <Content Include="Assets\Imagenes\8.jpg" />
     <Content Include="Assets\Imagenes\9.jpg" />
+    <Content Include="Assets\Imagenes\favorito.ico" />
     <Content Include="Assets\Imagenes\fondo.jpg" />
     <Content Include="Assets\Imagenes\logo.png" />
     <Content Include="SQLScripts\Crear tabla Compras.sql" />
@@ -89,6 +90,7 @@
     <Content Include="SQLScripts\SP Obtener Compras.sql" />
     <Content Include="SQLScripts\SP Obtener Libros.sql" />
     <Content Include="Vistas\Mis_Compras.aspx" />
+    <Content Include="Vistas\Mis_Favoritos.aspx" />
     <Content Include="Vistas\Mi_Carrito.aspx" />
     <Content Include="Vistas\Principal.aspx" />
     <Content Include="Web.config" />
@@ -96,9 +98,11 @@
   <ItemGroup>
     <Compile Include="Base_de_datos\Conexion_base.cs" />
     <Compile Include="Controladores\Controlador_Compras.cs" />
+    <Compile Include="Controladores\Controlador_Favoritos.cs" />
     <Compile Include="Controladores\Controlador_libros.cs" />
     <Compile Include="Controladores\Controlador_Usuario.cs" />
     <Compile Include="Modelos\Modelo_Compras.cs" />
+    <Compile Include="Modelos\Modelo_Favoritos.cs" />
     <Compile Include="Modelos\Modelo_libros.cs" />
     <Compile Include="Modelos\Modelo_Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,6 +112,13 @@
     </Compile>
     <Compile Include="Vistas\Mis_Compras.aspx.designer.cs">
       <DependentUpon>Mis_Compras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Mis_Favoritos.aspx.cs">
+      <DependentUpon>Mis_Favoritos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Mis_Favoritos.aspx.designer.cs">
+      <DependentUpon>Mis_Favoritos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Mi_Carrito.aspx.cs">
       <DependentUpon>Mi_Carrito.aspx</DependentUpon>

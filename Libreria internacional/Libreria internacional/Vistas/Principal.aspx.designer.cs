@@ -33,6 +33,15 @@ namespace Libreria_internacional.Vistas
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Reservaciones;
 
         /// <summary>
+        /// Control Favoritos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Favoritos;
+
+        /// <summary>
         /// Control CerrarSesion.
         /// </summary>
         /// <remarks>
