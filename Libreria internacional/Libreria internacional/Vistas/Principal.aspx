@@ -12,6 +12,17 @@
 
 </head>
 <body>
+    <style>
+        body {
+            background-size: 100%;
+            background-image: url("https://previews.123rf.com/images/zinako/zinako1708/zinako170801291/85308977-fun-seamless-pattern-with-cartoon-books-can-be-used-for-wallpaper-pattern-fills-greeting-cards-webpa.jpg");
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+        }
+    </style>
+
     <form id="form1" runat="server">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-primary">
@@ -44,23 +55,26 @@
                 </div>
             </div>
         </nav>
+        <div align="center">
+            <img src="../Assets/Imagenes/logo.png"></div>
+
         <div id="divAlert" hidden="hidden" role="alert" runat="server">
             <label id="lblAlert" runat="server"></label>
         </div>
 
 
 
-        <div class="container-fluid ml-3" style="margin-top: 10%">
+        <div class="container-fluid ml-3" style="margin-top: 3%">
             <div class="row">
                 <asp:Repeater ID="Rep_Libros" runat="server">
                     <ItemTemplate>
-                        <div class="card" style="max-width: 20%; margin-right: 2%">
-                            <img src="<%# Eval(" Foto") %>" class="card-img-top">
+                        <div class="card" style="max-width: 20%; margin-right: 1%">
+                            <img src="<%# Eval(" Foto") %>" class="card-img-top" style="margin-top: 5%">
                             <div class="card-body">
                                 <h5 class="card-title"><%# Eval("Titulo") %></h5>
                                 <p class="card-text">Autor: <%# Eval("Autor") %></p>
                                 <p class="card-text">Fecha de publicacion: <%# Eval("Fecha_de_publicacion") %></p>
-                                <strong class="card-text">Precio: ₡<%# Eval("Precio") %> / p</strong>
+                                <strong class="card-text">Precio: ₡<%# Eval("Precio") %> / u</strong>
                                 <a style="float: left; margin-top: 10%" href="Mi_Carrito.aspx?Codigo=<%# Eval("ISBN") %>" class="btn btn-outline-info">Añadir a mi carrito</a>
 
                             </div>
@@ -73,11 +87,11 @@
 
         <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasScrollingLabel">
             <div class="offcanvas-header primary-color">
-                 <strong class="card-text"style="font-size:150%; background-color:aqua; border-radius: 2%">  Libreria Internacional  </strong>
+                <strong class="card-text" style="font-size: 150%; background-color: aqua; border-radius: 2%">Libreria Internacional  </strong>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                
+
                 <div class="card" id="cardLogin" runat="server">
                     <div class="card-body">
                         <div class="form-floating mb-3">

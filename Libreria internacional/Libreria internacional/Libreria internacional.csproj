@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Assets\Imagenes\1.jpg" />
     <Content Include="Assets\Imagenes\2.jpg" />
+    <Content Include="Assets\Imagenes\logo.png" />
     <Content Include="SQLScripts\Crear tabla Compras.sql" />
     <Content Include="SQLScripts\Crear tabla Libros.sql" />
     <Content Include="SQLScripts\Insertar Libros.sql" />

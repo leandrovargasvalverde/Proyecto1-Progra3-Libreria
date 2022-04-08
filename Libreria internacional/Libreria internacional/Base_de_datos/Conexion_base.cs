@@ -12,7 +12,7 @@ using System.Web;
         // SERVIDOR JUAN JOSE = @"DESKTOP-KP1HB7H";
         // SERVIDOR JOSE = @"DESKTOP-DLLS4QS";
 
-        const string servidor = @"DESKTOP-RSJLV6Q";
+        const string servidor = @"DESKTOP-DLLS4QS";
         const string baseDatos = "Base_Libros";
         const string strConexion = "Data Source=" + servidor + ";Initial Catalog=" + baseDatos + ";Integrated Security=True";
 
