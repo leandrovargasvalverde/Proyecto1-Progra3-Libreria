@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script type="text/javascript">
@@ -15,10 +15,10 @@
             var montodetalle = lblMontoconIVA.innerText;
 
             var monto = parseInt(montodetalle)
-                   
+
             lblMontoHospedaje.innerText = monto;
 
-            lblMontoFinal.innerText = (monto+ 4000);
+            lblMontoFinal.innerText = (monto + 4000);
         }
 
         function CalcularMontoNocheDetalle() {
@@ -28,7 +28,7 @@
             const montoNoche = parseInt(lblMontoUnidad.innerText);
             const lblMontosinIVA = document.querySelector("#lblMontosinIVA");
 
-            if (intLibros.value >1 ) {
+            if (intLibros.value > 1) {
                 var impuesto = (montoNoche * 0.13);
                 lblMontoconIVA.innerText = (montoNoche + impuesto) * intLibros.value;
                 lblMontosinIVA.innerText = montoNoche * intLibros.value;
@@ -48,38 +48,47 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <a class="navbar-brand" href="#">Libreria Internacional</a>
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Principal.aspx">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Contactenos</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 20%">
+    <style>
+        body {
+            background-size: 20%;
+            background-image: url("https://previews.123rf.com/images/zinako/zinako1708/zinako170801291/85308977-fun-seamless-pattern-with-cartoon-books-can-be-used-for-wallpaper-pattern-fills-greeting-cards-webpa.jpg");
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="Principal.aspx">Libreria Internacional</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Contactenos</a>
+                    </li>
+                </ul>
+                <form id="form2" class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 70%"./>
                         <button class="btn btn-outline-success" type="submit">Buscar</button>
-                    </form>
-                </div>
+                </form>    
             </div>
-        </nav>
-        <div id="divAlert" hidden="hidden" role="alert" runat="server">
-            <label id="lblAlert" runat="server"></label>
         </div>
-        <div class="container-fluid ml-3" style="margin-top: 10%">
+    </nav>
+    <br />
+    <br />
+    <div id="divAlert" hidden="hidden" role="alert" runat="server">
+        <label id="lblAlert" runat="server"></label>
+    </div>
+    <form id="form1" runat="server">
+        <div class="container-fluid ml-3" style="margin-top: 3%">
             <div class="row">
                 <asp:Repeater ID="Rep_Carrito" runat="server">
                     <ItemTemplate>
-                        <div class="card" style="max-width: 20%; margin-right: 2%">
-                            <img src="<%# Eval("Foto") %>" class="card-img-top" />
+                        <div class="card" style="max-width: 20%; height: 5%; margin-right: 2%; margin-left: 2%">
+                            <img src="<%# Eval("Foto") %>" class="card-img-top" style="margin-top:3%" />
                             <div class="card-body">
                                 <h5 class="card-title"><%# Eval("Titulo") %></h5>
                                 <p class="card-text">Autor: <%# Eval("Autor") %></p>
@@ -90,7 +99,7 @@
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
-                <div class="card" style="width: 30rem; margin-left: 2%">
+                <div class="card" style="width: 30rem; height: 57rem; margin-left: 2%">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
@@ -121,7 +130,8 @@
                         </div>
                         <div class="row mb-2">
                             <div class="col"><u>Precio sin IVA</div>
-                            <div class="col text-end">₡
+                            <div class="col text-end">
+                                ₡
                                 <label runat="server" id="lblMontosinIVA"></label>
                             </div>
                         </div>
@@ -134,28 +144,28 @@
                         </div>
                         <hr />
                         <div class="row mb-2">
-                            <div class="col"style="margin-left:30%"><u>Ingreso de datos:</div>
+                            <div class="col" style="margin-left: 30%"><u>Ingreso de datos:</div>
 
                             <div class="input-group mb-3">
-                             <input runat="server" id="INP_Nombre" type="text" class="form-control" placeholder="Nombre"  aria-describedby="basic-addon1">
+                                <input runat="server" id="INP_Nombre" type="text" class="form-control" placeholder="Nombre" aria-describedby="basic-addon1">
                             </div>
                             <div class="input-group mb-3">
-                             <input runat="server" id="Text1" type="text" class="form-control" placeholder="Provincia"  aria-describedby="basic-addon1">
+                                <input runat="server" id="Text1" type="text" class="form-control" placeholder="Provincia" aria-describedby="basic-addon1">
                             </div>
                             <div class="input-group mb-3">
-                             <input runat="server" id="Text2" type="text" class="form-control" placeholder="Direccion de entrega"  aria-describedby="basic-addon1">
+                                <input runat="server" id="Text2" type="text" class="form-control" placeholder="Direccion de entrega" aria-describedby="basic-addon1">
                             </div>
                             <div class="input-group mb-3">
-                             <input runat="server" id="Text3" type="text" class="form-control" placeholder="Codigo postal"  aria-describedby="basic-addon1">
+                                <input runat="server" id="Text3" type="text" class="form-control" placeholder="Codigo postal" aria-describedby="basic-addon1">
                             </div>
                             <div class="input-group mb-3">
-                             <input runat="server" id="Text4" type="text" class="form-control" placeholder="Numero de tarjeta"  aria-describedby="basic-addon1">
+                                <input runat="server" id="Text4" type="text" class="form-control" placeholder="Numero de tarjeta" aria-describedby="basic-addon1">
                             </div>
                             <div class="input-group mb-3">
-                             <input runat="server" id="Text5" type="text" class="form-control" placeholder="Fecha de expiracion"  aria-describedby="basic-addon1">
+                                <input runat="server" id="Text5" type="text" class="form-control" placeholder="Fecha de expiracion" aria-describedby="basic-addon1">
                             </div>
                             <div class="input-group mb-3">
-                             <input runat="server" id="Text6" type="text" class="form-control" placeholder="Codigo de seguridad "  aria-describedby="basic-addon1">
+                                <input runat="server" id="Text6" type="text" class="form-control" placeholder="Codigo de seguridad " aria-describedby="basic-addon1">
                             </div>
                         </div>
 
