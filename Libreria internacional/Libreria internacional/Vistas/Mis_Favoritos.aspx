@@ -56,14 +56,10 @@
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
-                                        <h5 class="card-title" style="font-size: medium">Titulo:  <%# Eval("Titulo") %></h5>
-                                        <p style="font-size: small" class="card-text">Precio por unidad:  ₡<%# Eval("Monto_Unidad") %></p>
-                                        <p style="font-size: small" class="card-text">Cantidad de libros:  <%# Eval("Cantidad_libros") %></p>
-                                        <p style="font-size: small" class="card-text">Fecha de la compra:  <%# Eval("Fecha_compra") %></p>
-                                        <p style="font-size: small" class="card-text">Fecha de llegada de la compra:  <%# Eval("Fecha_llegada_compra") %></p>
-                                        <p style="font-size: small" class="card-text">Monto Con IVA:  ₡<%# Eval("Monto_con_IVA") %></p>
-                                        <p style="font-size: small" class="card-text">Monto Con IVA:  ₡<%# Eval("Monto_sin_IVA") %></p>
-                                        <p style="font-size: small" class="card-text">Monto total:  ₡<%# Eval("Monto_final") %></p>
+                                        <h5 class="card-title"><%# Eval("Titulo") %></h5>
+                                        <p class="card-text">Autor: <%# Eval("Autor") %></p>
+                                        <p class="card-text">Fecha de publicacion: <%# Eval("Fecha_de_publicacion") %></p>
+                                        <strong class="card-text">Precio: ₡<%# Eval("Precio") %> / u</strong>
                                     </div>
                                 </div>
                             </div>

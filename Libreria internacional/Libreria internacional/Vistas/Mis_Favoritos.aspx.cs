@@ -19,7 +19,7 @@ namespace Libreria_internacional.Vistas
                 {
                     Controladores.Controlador_Favoritos favoritos = new Controladores.Controlador_Favoritos();
                     Modelos.Modelo_Usuarios Usuario = (Modelos.Modelo_Usuarios)Session["Login"];
-                    Rep_Favoritos.DataSource = favoritos.obtenercompras(Usuario);
+                    Rep_Favoritos.DataSource = favoritos.obtenerfavoritos(Usuario);
                     Rep_Favoritos.DataBind();
                 }
             }
@@ -28,6 +28,29 @@ namespace Libreria_internacional.Vistas
                 Response.Redirect("Principal.aspx?session=false");
             }
 
+        }
+
+        protected void Btn_Guardar_Favorito_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Int16 Codigo_libros = Convert.ToInt16(Request.QueryString["Codigo"]);
+                modelo.Modelo_Usuarios Usuario = (modelo.Modelo_Usuarios)Session["Login"];
+
+                modelo.Modelo_Favoritos favoritos = new modelo.Modelo_Favoritos()
+                {
+                    
+                };
+                controlador.Controlador_Favoritos favoritos1 = new controlador.Controlador_Favoritos();
+                favoritos1.Guardar_Favoritos(favoritos);
+                MostrarAlert("Libro Guardado como Favorito", "info");
+
+            }
+            catch
+            {
+                MostrarAlert("Error al guardar el libro como favorito", "danger");
+
+            }
         }
 
         public void MostrarAlert(string mensaje, string tipoMensaje)
