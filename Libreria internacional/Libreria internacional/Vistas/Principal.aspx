@@ -32,22 +32,31 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <a class="navbar-brand">Libreria Internacional</a>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="Principal.aspx">Inicio</a>
                         </li>
 
-                        <li class="nav-item">
+                        <!--<li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="Mi_Carrito.aspx">Mi carrito</a>
-                        </li>
+                        </li>-->
+
                         <li class="nav-item" id="Reservaciones" runat="server" hidden="hidden">
                             <a class="nav-link" href="Mis_Compras.aspx">Mis Compras</a>
                         </li>
+
+                         <li class="nav-item" id="Favoritos" runat="server" hidden="hidden">
+                            <a class="nav-link" href="Mis_Favoritos.aspx">Mis Favoritos</a>
+                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Contactenos</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link active" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Iniciar sesion</a>
                         </li>
+
                         <li class="nav-item" id="CerrarSesion" runat="server" hidden="hidden">
                             <a class="nav-link" runat="server" onserverclick="CerrarSesion_Click">Cerrar sesion</a>
                         </li>
@@ -75,7 +84,7 @@
                                 <p class="card-text">Fecha de publicacion: <%# Eval("Fecha_de_publicacion") %></p>
                                 <strong class="card-text">Precio: ₡<%# Eval("Precio") %> / u</strong>
                                 <a style="float: left; margin-top: 10%" href="Mi_Carrito.aspx?Codigo=<%# Eval("ISBN") %>" class="btn btn-outline-info">Añadir a mi carrito</a>
-
+                                <a style="float: left; margin-top: 8%" href="Mis_Favoritos.aspx?Codigo=<%# Eval("ISBN") %>" class="btn btn-outline-info" <span>&#128153;</span></a>
                             </div>
                         </div>
                     </ItemTemplate>
