@@ -15,8 +15,8 @@ namespace Libreria_internacional.Vistas
         {
             if ((Modelos.Modelo_Usuarios)Session["Login"] != null)
             {
-                if (!IsPostBack)
-                {
+                
+                
                     Int16 Codigo = Convert.ToInt16(Request.QueryString["Codigo"]);
                     controlador.Controlador_libros Libros = new controlador.Controlador_libros();
                     List<modelo.Modelo_libros> lista_libros = Libros.Obtener_libros(Codigo);
@@ -30,10 +30,19 @@ namespace Libreria_internacional.Vistas
                     dt_Dia_Compra.Value = DateTime.Today.ToString("yyyy-MM-dd");
                     dt_Llegad_Compra.Value = DateTime.Now.AddDays(30).ToString("yyyy-MM-dd");
                     intLibros.Value = "1";
-                 
-                    Rep_Carrito.DataSource = lista_libros;
+
+                    txt_Nombre.Value = "Nombre";
+                    txt_Pais.Value = "Pais";
+                    txt_Estado.Value = "Estado";
+                    txt_Direccion_de_entrega.Value = "Direccion de entrega";
+                    txt_Codigo_postal.Value = "Codigo postal";
+                    txt_Numero_de_tarjeta.Value = "Numero de tarjeta";
+                    txt_Fecha_de_expiracion.Value = "Fecha de expiracion";
+                    txt_Codigo_de_seguridad.Value = "Codigo de seguridad";
+
+                Rep_Carrito.DataSource = lista_libros;
                     Rep_Carrito.DataBind();
-                }
+                
             }
             else
             {
@@ -59,7 +68,15 @@ namespace Libreria_internacional.Vistas
                     Monto_sin_IVA = Convert.ToInt32(lblMontosinIVA.InnerText),
                     Monto_final = Convert.ToInt32(lblMontoFinal.InnerText),
                     Monto_Unidad = Convert.ToInt32(lblMontoUnidad.InnerText),
-             
+                    Nombre = Convert.ToString(txt_Nombre.Value),
+                    Pais = txt_Pais.Value,
+                    Estado = txt_Estado.Value,
+                    Direccion_de_entrega = txt_Direccion_de_entrega.Value,
+                    Codigo_postal = txt_Codigo_postal.Value,
+                    Numero_de_tarjeta = txt_Numero_de_tarjeta.Value,
+                    Fecha_de_expiracion = txt_Fecha_de_expiracion.Value,
+                    Codigo_de_seguridad = txt_Codigo_de_seguridad.Value
+
                 };
                 controlador.Controlador_Compras compras = new controlador.Controlador_Compras();
                 compras.Guardar_Compras(Compras);

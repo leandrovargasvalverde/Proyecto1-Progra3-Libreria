@@ -146,27 +146,47 @@
                         <div class="row mb-2">
                             <div class="col" style="margin-left: 30%"><u>Ingreso de datos:</div>
 
+                            <div class="row mb-2">
                             <div class="input-group mb-3">
-                                <input runat="server" id="INP_Nombre" type="text" class="form-control" placeholder="Nombre" aria-describedby="basic-addon1">
+                                <input runat="server" id="txt_Nombre" type="text" class="form-control" placeholder="Nombre"  />
                             </div>
+                        </div>
+                        <div class="row mb-2">
                             <div class="input-group mb-3">
-                                <input runat="server" id="Text1" type="text" class="form-control" placeholder="Provincia" aria-describedby="basic-addon1">
+                                <input runat="server" id="txt_Pais" type="text" class="form-control" placeholder="Pais"  />
                             </div>
+                        </div>
+                        <div class="row mb-2">
                             <div class="input-group mb-3">
-                                <input runat="server" id="Text2" type="text" class="form-control" placeholder="Direccion de entrega" aria-describedby="basic-addon1">
+                                <input runat="server" id="txt_Estado" type="text" class="form-control" placeholder="Estado" />
                             </div>
+                        </div>
+                        <div class="row mb-2">
                             <div class="input-group mb-3">
-                                <input runat="server" id="Text3" type="text" class="form-control" placeholder="Codigo postal" aria-describedby="basic-addon1">
+                                <input runat="server" id="txt_Direccion_de_entrega" type="text" class="form-control" placeholder="Direccion de entrega" />
                             </div>
+                        </div>
+                        <div class="row mb-2">
                             <div class="input-group mb-3">
-                                <input runat="server" id="Text4" type="text" class="form-control" placeholder="Numero de tarjeta" aria-describedby="basic-addon1">
+                                <input runat="server" id="txt_Codigo_postal" class="form-control" type="text" placeholder="Codigo postal"  />
                             </div>
+                        </div>
+                        <div class="row mb-2">
                             <div class="input-group mb-3">
-                                <input runat="server" id="Text5" type="text" class="form-control" placeholder="Fecha de expiracion" aria-describedby="basic-addon1">
+                                <input runat="server" id="txt_Numero_de_tarjeta" type="text" class="form-control" placeholder="Numero de tarjeta"  />
                             </div>
+                        </div>
+                        <div class="row mb-2">
                             <div class="input-group mb-3">
-                                <input runat="server" id="Text6" type="text" class="form-control" placeholder="Codigo de seguridad " aria-describedby="basic-addon1">
+                                <input runat="server" id="txt_Fecha_de_expiracion" type="text" class="form-control" placeholder="Fecha de expiracion"  />
                             </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="input-group mb-3">
+                                <input runat="server" id="txt_Codigo_de_seguridad" type="text" class="form-control" placeholder="Codigo de seguridad"   />
+                            </div>
+                        </div>
+
                         </div>
 
 
@@ -182,7 +202,7 @@
                         <hr />
                         <div class="row mb-2">
                             <div class="col mb-2">
-                                <button runat="server" id="btnGuardarReservacion" class="btn btn-primary" onserverclick="Btn_Guardar_Compra_Click">Reservar</button>
+                                <button runat="server" id="btnGuardarReservacion" class="btn btn-primary" onserverclick="Btn_Guardar_Compra_Click">Guardar_Compra</button>
                             </div>
                         </div>
                     </div>

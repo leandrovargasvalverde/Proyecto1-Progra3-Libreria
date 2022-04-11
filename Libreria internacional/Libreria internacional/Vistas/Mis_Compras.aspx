@@ -44,11 +44,11 @@
             </div>
         </nav>
 
-          <div class="container-fluid ml-3" style="margin-top: 5%">
+          <div class="container-fluid ml-3" style="margin-top: 2%">
             <div class="row">
                 <asp:Repeater ID="Rep_Compras" runat="server">
                     <ItemTemplate>
-                        <div class="card mb-3" style="max-width: 30%;max-height:30%; margin-right:2%">
+                        <div class="card mb-3" style="max-width: 45%;max-height:45%; margin-right:2%">
                             <div class="row g-0">
                                 <div class="col-md-4">
                                     <img style="margin-top: 4%" src=" <%# Eval("Foto") %>" class="img-fluid rounded-start">
@@ -63,6 +63,13 @@
                                         <p style="font-size:small"  class="card-text">Monto Con IVA:  ₡<%# Eval("Monto_con_IVA") %></p>
                                         <p style="font-size:small"  class="card-text">Monto Con IVA:  ₡<%# Eval("Monto_sin_IVA") %></p>
                                         <p style="font-size:small"  class="card-text">Monto total:  ₡<%# Eval("Monto_final") %></p>
+                                         <hr />
+                                        <h5 class="card-title"style="font-size:medium">Datos de la compra: </h5>
+                                        <p style="font-size:small"  class="card-text">Cliente:  <%# Eval("Nombre") %></p>
+                                        <p style="font-size:small"  class="card-text">Pais:  <%# Eval("Pais") %></p>
+                                        <p style="font-size:small"  class="card-text">Estado:  <%# Eval("Estado") %></p>
+                                        <p style="font-size:small"  class="card-text">Direccion de entrega:  <%# Eval("Direccion_de_entrega") %></p>
+                                        <p style="font-size:small"  class="card-text">Codigo postal:  <%# Eval("Codigo_postal") %></p>
                                     </div>
                                 </div>
                             </div>
