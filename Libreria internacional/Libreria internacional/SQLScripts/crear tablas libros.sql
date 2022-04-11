@@ -1,9 +1,7 @@
-CREATE DATABASE "Base_Libros"
-
 USE [Base_Libros]
 GO
 
-/****** Object:  Table [dbo].[Tabla_Libros]    Script Date: 1/4/2022 14:40:16 ******/
+/****** Object:  Table [dbo].[Tabla_Libros]    Script Date: 10/4/2022 16:37:21 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -16,7 +14,8 @@ CREATE TABLE [dbo].[Tabla_Libros](
 	[Titulo] [varchar](200) NULL,
 	[Autor] [varchar](200) NULL,
 	[Fecha_de_publicacion] [varchar](50) NULL,
-	[Precio] [money] NULL,
+	[Precio] [money] NULL
 ) ON [PRIMARY]
 GO
+
 
