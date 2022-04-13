@@ -16,10 +16,22 @@ namespace Libreria_internacional.Vistas
         {
             try
             {
-                
+
+                Int16 Codigo = Convert.ToInt16(Request.QueryString["Codigo"]);
                 btnGuardarReservacion.Attributes.Add("onclick", "return false");
                 Int16 Codigo_libros = Convert.ToInt16(Request.QueryString["Codigo"]);
                 modelo.Modelo_Usuarios Usuario = (modelo.Modelo_Usuarios)Session["Login"];
+                controlador.Controlador_libros Libros = new controlador.Controlador_libros();
+                List<modelo.Modelo_libros> lista_libros = Libros.Obtener_libros(Codigo);
+
+                double cantidad_libros = Convert.ToDouble(intLibros.Value);
+
+                double monto_sin_iva = (lista_libros[0].Precio * cantidad_libros);
+                double IVA = monto_sin_iva * 0.13;
+                double monto_con_iva = monto_sin_iva + IVA;
+                double tot = monto_con_iva + 4000;
+
+
 
                 modelo.Modelo_Compras Compras = new modelo.Modelo_Compras()
                 {
@@ -28,9 +40,9 @@ namespace Libreria_internacional.Vistas
                     Cantidad_libros = Convert.ToInt16(intLibros.Value),
                     Fecha_compra = Convert.ToDateTime(dt_Dia_Compra.Value).ToShortDateString(),
                     Fecha_llegada_compra = Convert.ToDateTime(dt_Llegad_Compra.Value).ToShortDateString(),
-                    Monto_con_IVA = Convert.ToInt32(lblMontoconIVA.InnerText),
-                    Monto_sin_IVA = Convert.ToInt32(lblMontosinIVA.InnerText),
-                    Monto_final = Convert.ToInt32(lblMontoFinal.InnerText),
+                    Monto_con_IVA = Convert.ToInt32(monto_con_iva),
+                    Monto_sin_IVA = Convert.ToInt32(monto_sin_iva),
+                    Monto_final = Convert.ToInt32(tot),
                     Monto_Unidad = Convert.ToInt32(lblMontoUnidad.InnerText),
                     Nombre = Convert.ToString(txt_Nombre.Value),
                     Pais = txt_Pais.Value,
@@ -45,7 +57,6 @@ namespace Libreria_internacional.Vistas
                 controlador.Controlador_Compras compras = new controlador.Controlador_Compras();
                 compras.Guardar_Compras(Compras);
                 MostrarAlert("Compra realizada con éxito", "info");
-
             }
             catch
             {
