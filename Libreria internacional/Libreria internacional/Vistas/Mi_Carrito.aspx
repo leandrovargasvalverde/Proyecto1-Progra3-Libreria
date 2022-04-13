@@ -202,8 +202,10 @@
                         <hr />
                         <div class="row mb-2">
                             <div class="col mb-2">
-                                <button runat="server" id="btnGuardarReservacion" class="btn btn-primary" onserverclick="Btn_Guardar_Compra_Click">Guardar_Compra</button>
-                            </div>
+                                <button runat="server" id="btnGuardarReservacion1" class="btn btn-primary" postback="false" onclick="Btn_Guardar_Compra_Click" >Guardar_Compra</button>
+                            
+                                <asp:Button  ID="btnGuardarReservacion" runat="server" Text="Button" PostBack="false" OnClick="Btn_Guardar_Compra_Click"/>
+                           </div>
                         </div>
                     </div>
                 </div>

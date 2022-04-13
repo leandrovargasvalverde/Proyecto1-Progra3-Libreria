@@ -1,5 +1,5 @@
-﻿using controlador=Libreria_internacional.Controladores;
-using modelo= Libreria_internacional.Modelos;
+﻿using controlador = Libreria_internacional.Controladores;
+using modelo = Libreria_internacional.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,52 +11,16 @@ namespace Libreria_internacional.Vistas
 {
     public partial class Mi_Carrito : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if ((Modelos.Modelo_Usuarios)Session["Login"] != null)
-            {
-                
-                
-                    Int16 Codigo = Convert.ToInt16(Request.QueryString["Codigo"]);
-                    controlador.Controlador_libros Libros = new controlador.Controlador_libros();
-                    List<modelo.Modelo_libros> lista_libros = Libros.Obtener_libros(Codigo);
 
-
-                    lblMontoUnidad.InnerText = lista_libros[0].Precio.ToString();
-                 
-                    lblMontoconIVA.InnerText = (lista_libros[0].Precio * 1).ToString();
-                    lblMontoFinal.InnerText = (lista_libros[0].Precio * 1).ToString();
-                    lblMontosinIVA.InnerText = (lista_libros[0].Precio * 1).ToString();
-                    dt_Dia_Compra.Value = DateTime.Today.ToString("yyyy-MM-dd");
-                    dt_Llegad_Compra.Value = DateTime.Now.AddDays(30).ToString("yyyy-MM-dd");
-                    intLibros.Value = "1";
-
-                    txt_Nombre.Value = "Nombre";
-                    txt_Pais.Value = "Pais";
-                    txt_Estado.Value = "Estado";
-                    txt_Direccion_de_entrega.Value = "Direccion de entrega";
-                    txt_Codigo_postal.Value = "Codigo postal";
-                    txt_Numero_de_tarjeta.Value = "Numero de tarjeta";
-                    txt_Fecha_de_expiracion.Value = "Fecha de expiracion";
-                    txt_Codigo_de_seguridad.Value = "Codigo de seguridad";
-
-                Rep_Carrito.DataSource = lista_libros;
-                    Rep_Carrito.DataBind();
-                
-            }
-            else
-            {
-                Response.Redirect("Principal.aspx?session=false");
-            }
-
-        }
         protected void Btn_Guardar_Compra_Click(object sender, EventArgs e)
         {
             try
-            { 
+            {
+                
+                btnGuardarReservacion.Attributes.Add("onclick", "return false");
                 Int16 Codigo_libros = Convert.ToInt16(Request.QueryString["Codigo"]);
                 modelo.Modelo_Usuarios Usuario = (modelo.Modelo_Usuarios)Session["Login"];
-                
+
                 modelo.Modelo_Compras Compras = new modelo.Modelo_Compras()
                 {
                     ID = Codigo_libros,
@@ -89,6 +53,43 @@ namespace Libreria_internacional.Vistas
 
             }
         }
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            
+            if ((Modelos.Modelo_Usuarios)Session["Login"] != null)
+            {
+                if (!IsPostBack)
+                {
+
+
+                    Int16 Codigo = Convert.ToInt16(Request.QueryString["Codigo"]);
+                    controlador.Controlador_libros Libros = new controlador.Controlador_libros();
+                    List<modelo.Modelo_libros> lista_libros = Libros.Obtener_libros(Codigo);
+
+
+                    lblMontoUnidad.InnerText = lista_libros[0].Precio.ToString();
+
+                    lblMontoconIVA.InnerText = (lista_libros[0].Precio * 1).ToString();
+                    lblMontoFinal.InnerText = (lista_libros[0].Precio * 1).ToString();
+                    lblMontosinIVA.InnerText = (lista_libros[0].Precio * 1).ToString();
+                    dt_Dia_Compra.Value = DateTime.Today.ToString("yyyy-MM-dd");
+                    dt_Llegad_Compra.Value = DateTime.Now.AddDays(30).ToString("yyyy-MM-dd");
+                    intLibros.Value = "1";
+
+                    
+
+                    Rep_Carrito.DataSource = lista_libros;
+                    Rep_Carrito.DataBind();
+                }
+
+            }
+            else
+            {
+                Response.Redirect("Principal.aspx?session=false");
+            }
+
+        }
+
         public void MostrarAlert(string mensaje, string tipoMensaje)
         {
             divAlert.Attributes.Add("class", "alert alert-" + tipoMensaje);
