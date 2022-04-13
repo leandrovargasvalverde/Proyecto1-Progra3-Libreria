@@ -1,3 +1,5 @@
+--CREATE DATABASE "Base_Libros"
+
 USE [Base_Libros]
 GO
 
