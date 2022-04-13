@@ -99,7 +99,7 @@
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
-                <div class="card" style="width: 30rem; height: 57rem; margin-left: 2%">
+                <div class="card" style="width: 30rem; height: 64rem; margin-left: 2%">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
@@ -202,9 +202,8 @@
                         <hr />
                         <div class="row mb-2">
                             <div class="col mb-2">
-                                <button runat="server" id="btnGuardarReservacion1" class="btn btn-primary" postback="false" onclick="Btn_Guardar_Compra_Click" >Guardar_Compra</button>
                             
-                                <asp:Button  ID="btnGuardarReservacion" runat="server" Text="Button" PostBack="false" OnClick="Btn_Guardar_Compra_Click"/>
+                                <asp:Button  ID="btnGuardarReservacion" runat="server" Text="Guardar Compra" PostBack="false" OnClick="Btn_Guardar_Compra_Click" class="btn btn-primary"/>
                            </div>
                         </div>
                     </div>

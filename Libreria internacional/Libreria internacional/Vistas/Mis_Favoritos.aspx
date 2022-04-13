@@ -13,30 +13,30 @@
 
 </head>
 <body>
+    <style>
+        body {
+            background-size: 20%;
+            background-image: url("https://previews.123rf.com/images/zinako/zinako1708/zinako170801291/85308977-fun-seamless-pattern-with-cartoon-books-can-be-used-for-wallpaper-pattern-fills-greeting-cards-webpa.jpg");
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+        }
+    </style>
     <form id="form1" runat="server">
-        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <a class="navbar-brand">Libreria Internacional</a>
+                    <a class="navbar-brand" href="Principal.aspx">Libreria Internacional</a>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Principal.aspx">Inicio</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Mi_Carrito.aspx">Mi carrito</a>
-                        </li>
 
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Contactenos</a>
                         </li>
 
-                        <li class="nav-item" id="CerrarSesion" runat="server" hidden="hidden">
-                            <a class="nav-link" runat="server">Cerrar sesion</a>
-                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
