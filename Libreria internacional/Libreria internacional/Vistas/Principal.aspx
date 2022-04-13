@@ -100,7 +100,7 @@
         <br />
         <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasScrollingLabel">
             <div class="offcanvas-header primary-color">
-                <strong class="card-text" style="font-size: 150%; background-color: aqua; border-radius: 2%">Libreria Internacional  </strong>
+                <img src="../Assets/Imagenes/logo.png"; style="width:90%" />
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
