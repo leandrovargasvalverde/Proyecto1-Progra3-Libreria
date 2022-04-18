@@ -21,7 +21,7 @@
             position: absolute;
         }
     </style>
-    <form id="form1" runat="server">
+
         <div class="container">
             <div class="row align-items-stretch justify-content-between">
                 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -61,6 +61,10 @@
                                     <a class="nav-link active" runat="server" onserverclick="CerrarSesion_Click">Cerrar sesion</a>
                                 </li>
                             </ul>
+                        <form id="form2" class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 70%"./>
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form> 
                         </div>
                     </div>
                 </nav>
@@ -71,7 +75,7 @@
         <div id="divAlert" hidden="hidden" role="alert" runat="server">
             <label id="lblAlert" runat="server"></label>
         </div>
-
+        <form id="form1" runat="server">
         <div align="center">
             <img src="../Assets/Imagenes/logo.png" />
         </div>

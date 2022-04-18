@@ -70,10 +70,6 @@
                         <a class="nav-link active" aria-current="page" href="#">Contactenos</a>
                     </li>
                 </ul>
-                <form id="form2" class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 70%"./>
-                        <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>    
             </div>
         </div>
     </nav>
@@ -88,7 +84,7 @@
                 <asp:Repeater ID="Rep_Carrito" runat="server">
                     <ItemTemplate>
                         <div class="card" style="max-width: 20%; height: 5%; margin-right: 2%; margin-left: 2%">
-                            <img src="<%# Eval("Foto") %>" class="card-img-top" style="margin-top:3%" />
+                            <img src="<%# Eval("Foto") %>" class="card-img-top" style="margin-top: 3%" />
                             <div class="card-body">
                                 <h5 class="card-title"><%# Eval("Titulo") %></h5>
                                 <p class="card-text">Autor: <%# Eval("Autor") %></p>
@@ -147,45 +143,45 @@
                             <div class="col" style="margin-left: 30%"><u>Ingreso de datos:</div>
 
                             <div class="row mb-2">
-                            <div class="input-group mb-3">
-                                <input runat="server" id="txt_Nombre" type="text" class="form-control" placeholder="Nombre"  />
+                                <div class="input-group mb-3">
+                                    <input runat="server" id="txt_Nombre" type="text" class="form-control" placeholder="Nombre" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="input-group mb-3">
-                                <input runat="server" id="txt_Pais" type="text" class="form-control" placeholder="Pais"  />
+                            <div class="row mb-2">
+                                <div class="input-group mb-3">
+                                    <input runat="server" id="txt_Pais" type="text" class="form-control" placeholder="Pais" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="input-group mb-3">
-                                <input runat="server" id="txt_Estado" type="text" class="form-control" placeholder="Estado" />
+                            <div class="row mb-2">
+                                <div class="input-group mb-3">
+                                    <input runat="server" id="txt_Estado" type="text" class="form-control" placeholder="Estado" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="input-group mb-3">
-                                <input runat="server" id="txt_Direccion_de_entrega" type="text" class="form-control" placeholder="Direccion de entrega" />
+                            <div class="row mb-2">
+                                <div class="input-group mb-3">
+                                    <input runat="server" id="txt_Direccion_de_entrega" type="text" class="form-control" placeholder="Direccion de entrega" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="input-group mb-3">
-                                <input runat="server" id="txt_Codigo_postal" class="form-control" type="text" placeholder="Codigo postal"  />
+                            <div class="row mb-2">
+                                <div class="input-group mb-3">
+                                    <input runat="server" id="txt_Codigo_postal" class="form-control" type="text" placeholder="Codigo postal" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="input-group mb-3">
-                                <input runat="server" id="txt_Numero_de_tarjeta" type="text" class="form-control" placeholder="Numero de tarjeta"  />
+                            <div class="row mb-2">
+                                <div class="input-group mb-3">
+                                    <input runat="server" id="txt_Numero_de_tarjeta" type="text" class="form-control" placeholder="Numero de tarjeta" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="input-group mb-3">
-                                <input runat="server" id="txt_Fecha_de_expiracion" type="text" class="form-control" placeholder="Fecha de expiracion"  />
+                            <div class="row mb-2">
+                                <div class="input-group mb-3">
+                                    <input runat="server" id="txt_Fecha_de_expiracion" type="text" class="form-control" placeholder="Fecha de expiracion" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="input-group mb-3">
-                                <input runat="server" id="txt_Codigo_de_seguridad" type="text" class="form-control" placeholder="Codigo de seguridad"   />
+                            <div class="row mb-2">
+                                <div class="input-group mb-3">
+                                    <input runat="server" id="txt_Codigo_de_seguridad" type="text" class="form-control" placeholder="Codigo de seguridad" />
+                                </div>
                             </div>
-                        </div>
 
                         </div>
 
@@ -202,9 +198,9 @@
                         <hr />
                         <div class="row mb-2">
                             <div class="col mb-2">
-                            
-                                <asp:Button  ID="btnGuardarReservacion" runat="server" Text="Guardar Compra" PostBack="false" OnClick="Btn_Guardar_Compra_Click" class="btn btn-primary"/>
-                           </div>
+
+                                <asp:Button ID="btnGuardarReservacion" runat="server" Text="Guardar Compra" PostBack="false" OnClick="Btn_Guardar_Compra_Click" class="btn btn-primary" />
+                            </div>
                         </div>
                     </div>
                 </div>
