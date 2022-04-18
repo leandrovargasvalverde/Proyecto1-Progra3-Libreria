@@ -13,12 +13,18 @@ namespace Libreria_internacional.Vistas
         {
             if ((Modelos.Modelo_Usuarios)Session["Login"] != null)
             {
-                Controladores.Controlador_Compras compra = new Controladores.Controlador_Compras();
-                Modelos.Modelo_Usuarios Usuario = (Modelos.Modelo_Usuarios)Session["Login"];
-                Rep_Compras.DataSource = compra.obtenercompras(Usuario);
-                Rep_Compras.DataBind();
+                if (!IsPostBack)
+                {
+
+                    Controladores.Controlador_Compras compra = new Controladores.Controlador_Compras();
+                    Modelos.Modelo_Usuarios Usuario = (Modelos.Modelo_Usuarios)Session["Login"];
+                    Rep_Compras.DataSource = compra.obtenercompras(Usuario);
+                    Rep_Compras.DataBind();
+
+                }
             }
 
         }
+
     }
 }

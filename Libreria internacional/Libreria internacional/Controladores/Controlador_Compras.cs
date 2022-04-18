@@ -10,6 +10,13 @@ namespace Libreria_internacional.Controladores
 {
     public class Controlador_Compras
     {
+        public void Cancelar_Compras(int ID)
+        {
+            List<SqlParameter> param = new List<SqlParameter>();
+            param.Add(new SqlParameter("@ID", ID));
+            Conexion_base.executeQuery("[spEliminar_Compras]", param);
+        }
+
         public void Guardar_Compras(Modelo_Compras compra)
         {
             List<SqlParameter> param = new List<SqlParameter>();

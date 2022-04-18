@@ -53,6 +53,7 @@
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
+                                    º   º
                                         <h5 class="card-title" style="font-size: medium">Titulo:  <%# Eval("Titulo") %></h5>
                                         <p style="font-size: small" class="card-text">Precio por unidad:  ₡<%# Eval("Monto_Unidad") %></p>
                                         <p style="font-size: small" class="card-text">Cantidad de libros:  <%# Eval("Cantidad_libros") %></p>
@@ -68,6 +69,8 @@
                                         <p style="font-size: small" class="card-text">Estado:  <%# Eval("Estado") %></p>
                                         <p style="font-size: small" class="card-text">Direccion de entrega:  <%# Eval("Direccion_de_entrega") %></p>
                                         <p style="font-size: small" class="card-text">Codigo postal:  <%# Eval("Codigo_postal") %></p>
+                                        <a href="Servicio_eliminar_compra.aspx?ID=<%# Eval("ID") %>">Cancelar</a>
+
                                     </div>
                                 </div>
                             </div>
