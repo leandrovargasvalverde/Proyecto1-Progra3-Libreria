@@ -12,7 +12,7 @@ CREATE PROCEDURE [dbo].[spGuardar_Favoritos]
 @Titulo varchar(200),
 @Autor varchar(200),
 @Fecha_de_publicacion varchar(50),
-@Codigo varchar (200),
+@Codigo varchar (100),
 @Precio money
 
 AS
