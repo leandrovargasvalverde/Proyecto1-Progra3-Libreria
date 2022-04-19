@@ -60,13 +60,14 @@
                                 <li class="nav-item" id="CerrarSesion" runat="server" hidden="hidden">
                                     <a class="nav-link active" runat="server" onserverclick="CerrarSesion_Click">Cerrar sesion</a>
                                 </li>
-                            </ul>
-                        <form id="form2" class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 70%"./>
-                        <button class="btn btn-outline-success" type="submit">Buscar</button>
-                        </form> 
+                            </ul>   
+
+                           <form id="form2" class="d-flex">
+                                <input class="form-control me-2" type="text" placeholder="Filtro" aria-label="Search" style="width: 70%"./>
+                                <button class="btn btn-info" type="submit" href="FiltroLibro.aspx?Titulo=<%# Eval("Titulo") %>">Buscar</button>
+                           </form>                                        
+                         </div>                      
                         </div>
-                    </div>
                 </nav>
             </div>
         </div>
@@ -75,11 +76,11 @@
         <div id="divAlert" hidden="hidden" role="alert" runat="server">
             <label id="lblAlert" runat="server"></label>
         </div>
-        <form id="form1" runat="server">
+        
         <div align="center">
             <img src="../Assets/Imagenes/logo.png" />
         </div>
-
+        <form id="form1" runat="server">
         <div class="container-fluid ml-3" style="margin-top: 0,5%">
             <div class="row">
                 <asp:Repeater ID="Rep_Libros" runat="server">
@@ -90,6 +91,7 @@
                                 <h5 class="card-title"><%# Eval("Titulo") %></h5>
                                 <p class="card-text">Autor: <%# Eval("Autor") %></p>
                                 <p class="card-text">Fecha de publicacion: <%# Eval("Fecha_de_publicacion") %></p>
+                                <p class="card-text">ISBN: <%# Eval("Codigo") %></p>
                                 <strong class="card-text">Precio: ₡<%# Eval("Precio") %> / u</strong>
                                 <a style="float: left; margin-top: 10%" href="Mi_Carrito.aspx?Codigo=<%# Eval("ISBN") %>" class="btn btn-info">Añadir a mi carrito</a>
                                 <a style="float: left; margin-top: 10%; margin-left: 3%" href="Mis_Favoritos.aspx?Codigo=<%# Eval("ISBN") %>" class="btn btn-outline-info"><span>&#128153;</span></a>

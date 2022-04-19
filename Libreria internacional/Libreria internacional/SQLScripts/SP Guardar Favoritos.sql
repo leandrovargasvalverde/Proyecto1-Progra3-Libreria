@@ -12,21 +12,24 @@ CREATE PROCEDURE [dbo].[spGuardar_Favoritos]
 @Titulo varchar(200),
 @Autor varchar(200),
 @Fecha_de_publicacion varchar(50),
+@Codigo varchar (200),
 @Precio money
 
 AS
 BEGIN
 	INSERT INTO [dbo].[Tabla_Favoritos]
-           ([ISBN]
+           ([Foto]
            ,[Titulo]
            ,[Autor]
            ,[Fecha_de_publicacion]
+		   ,[Codigo]
            ,[Precio])
      VALUES
            (@ISBN
            ,@Titulo
            ,@Autor
            ,@Fecha_de_publicacion
+		   ,@Codigo
            ,@Precio)
 END
 GO

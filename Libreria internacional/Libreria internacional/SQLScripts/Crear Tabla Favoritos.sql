@@ -14,6 +14,7 @@ CREATE TABLE [dbo].[Tabla_Favoritos](
 	[Titulo] [varchar](200) NULL,
 	[Autor] [varchar](200) NULL,
 	[Fecha_de_publicacion] [varchar](50) NULL,
+	[Codigo] [varchar] (200) NOT NULL,
 	[Precio] [money] NULL,
 ) ON [PRIMARY]
 GO

@@ -23,8 +23,9 @@ namespace Libreria_internacional.Controladores
                     Foto = dr["Foto"].ToString(),
                     Autor = dr["Autor"].ToString(),
                     Fecha_de_publicacion = dr["Fecha_de_publicacion"].ToString(),
+                    Codigo = dr["Codigo"].ToString(),
                     Precio = Convert.ToDouble(dr["Precio"]),
-                    Titulo= dr["Titulo"].ToString(),
+                    Titulo = dr["Titulo"].ToString(),
                 };
 
                 Lista_libros.Add(Libro);

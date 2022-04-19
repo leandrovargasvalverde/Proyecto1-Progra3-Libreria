@@ -18,6 +18,7 @@ BEGIN
 	j.Fecha_de_publicacion,
 	j.Precio,
 	j.Foto,
+	j.Codigo,
 	j.Titulo
   FROM Tabla_Compras a
   INNER JOIN Tabla_Libros j

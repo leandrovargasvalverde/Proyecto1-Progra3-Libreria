@@ -17,6 +17,7 @@ namespace Libreria_internacional.Controladores
             param.Add(new SqlParameter("@Foto", favoritos.Foto));
             param.Add(new SqlParameter("@Autor", favoritos.Autor));
             param.Add(new SqlParameter("@Fecha_de_publicacion", favoritos.Fecha_de_publicacion));
+            param.Add(new SqlParameter("@Codigo", favoritos.Codigo));
             param.Add(new SqlParameter("@Precio", favoritos.Precio));
             param.Add(new SqlParameter("@Titulo", favoritos.Titulo));
 
@@ -38,6 +39,7 @@ namespace Libreria_internacional.Controladores
                     Foto = dr["Foto"].ToString(),
                     Autor = dr["Autor"].ToString(),
                     Fecha_de_publicacion = dr["Fecha_de_publicacion"].ToString(),
+                    Codigo = dr["Codigo"].ToString(),
                     Precio = Convert.ToDouble(dr["Precio"]),
                     Titulo = dr["Titulo"].ToString(),
                 };
