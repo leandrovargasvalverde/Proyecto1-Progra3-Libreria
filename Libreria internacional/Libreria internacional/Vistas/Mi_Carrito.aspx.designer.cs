@@ -105,6 +105,15 @@ namespace Libreria_internacional.Vistas
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblMontoconIVA;
 
         /// <summary>
+        /// Control lblMontoFinal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblMontoFinal;
+
+        /// <summary>
         /// Control txt_Nombre.
         /// </summary>
         /// <remarks>
@@ -175,15 +184,6 @@ namespace Libreria_internacional.Vistas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txt_Codigo_de_seguridad;
-
-        /// <summary>
-        /// Control lblMontoFinal.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblMontoFinal;
 
         /// <summary>
         /// Control btnGuardarReservacion.

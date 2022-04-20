@@ -28,7 +28,7 @@
             const montoNoche = parseInt(lblMontoUnidad.innerText);
             const lblMontosinIVA = document.querySelector("#lblMontosinIVA");
 
-            if (intLibros.value > 1) {
+            if (intLibros.value >= 1) {
                 var impuesto = (montoNoche * 0.13);
                 lblMontoconIVA.innerText = (montoNoche + impuesto) * intLibros.value;
                 lblMontosinIVA.innerText = montoNoche * intLibros.value;
@@ -95,14 +95,11 @@
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
-                <div class="card" style="width: 30rem; height: 64rem; margin-left: 2%">
+                <div class="card" style="width: 30rem; height: 68rem; margin-left: 2%">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
                                 <h5 class="card-title"><strong>Unidad ₡<label id="lblMontoUnidad" runat="server"></label></strong></h5>
-                            </div>
-                            <div class="col">
-                                <h6 class="card-subtitle mb-2 text-muted" style="float: right">4.95 · 97 reseñas</h6>
                             </div>
                         </div>
                         <hr />
@@ -120,28 +117,45 @@
                             <div class="col">
                                 Cantidad de libros
                                 <br />
-                                <input runat="server" type="number" class="form-control" id="intLibros" min="1" max="10" onclick="CalcularMontoNocheDetalle()" />
+                                <input runat="server" type="number" class="form-control" id="intLibros" min="1" max="10" onmouseover="CalcularMontoNocheDetalle()" onmouseleave="CalcularMontoNocheDetalle()" onclick="CalcularMontoNocheDetalle()" />
                             </div>
 
                         </div>
                         <div class="row mb-2">
-                            <div class="col"><u>Precio sin IVA</div>
+                            <div class="col text-rigth">Precio sin IVA</div>
                             <div class="col text-end">
                                 ₡
                                 <label runat="server" id="lblMontosinIVA"></label>
                             </div>
                         </div>
                         <div class="row mb-2">
-                            <div class="col"><u>Precio incluyendo IVA</div>
+                            <div class="col text-rigth">Precio incluyendo IVA</div>
                             <div class="col text-end">
                                 ₡
                                 <label runat="server" id="lblMontoconIVA"></label>
                             </div>
                         </div>
+                        <div class="row mb-2">
+                            <div class="col text-rigth">Precio de Entrega</div>
+                            <div class="col text-end">
+                                ₡
+                                <label>4000</label>
+                            </div>
+                        </div>
                         <hr />
                         <div class="row mb-2">
-                            <div class="col" style="margin-left: 30%"><u>Ingreso de datos:</div>
-
+                            <div class="col text-rigth"><strong>Total</strong> </div>
+                            <div class="col text-end">
+                                <strong>₡
+                                <label runat="server" id="lblMontoFinal"></label>
+                                </strong>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row mb-2">
+                            <div class="col text-center"><strong>Ingreso sus datos para la compra:</strong></div>
+                            <br />
+                            <br />
                             <div class="row mb-2">
                                 <div class="input-group mb-3">
                                     <input runat="server" id="txt_Nombre" type="text" class="form-control" placeholder="Nombre" />
@@ -185,17 +199,8 @@
 
                         </div>
 
+                        <hr />
 
-                        <hr />
-                        <div class="row mb-2">
-                            <div class="col"><strong>Total</strong> </div>
-                            <div class="col text-end">
-                                <strong>₡
-                                <label runat="server" id="lblMontoFinal"></label>
-                                </strong>
-                            </div>
-                        </div>
-                        <hr />
                         <div class="row mb-2">
                             <div class="col mb-2">
 

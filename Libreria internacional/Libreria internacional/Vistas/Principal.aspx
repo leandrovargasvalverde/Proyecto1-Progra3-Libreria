@@ -129,12 +129,12 @@
                 <div class="card" id="cardUser" runat="server" hidden="hidden" style="margin-top: 15%">
                     <div class="card">
                         <div class="card-body text-center">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" style="width: 100px; margin-top: -65px" alt="User" class="img-fluid img-thumbnail rounded-circle border-0 mb-3" />
+                            <img src="https://cdn.pixabay.com/photo/2019/08/11/18/59/icon-4399701_960_720.png" style="width: 100px; margin-top: -65px" alt="User" class="img-fluid img-thumbnail rounded-circle border-0 mb-3" />
                             <h5 class="card-title">
                                 <label id="lblName" runat="server"></label>
                             </h5>
-                            <p class="text-secondary mb-1">Senior Software Engineer</p>
-                            <p class="text-muted font-size-sm">Ciudad Colon, Mora</p>
+                            <p class="text-secondary mb-1">Bienvenido a la Libreria Internacional</p>
+                            <p class="text-muted font-size-sm">Estamos para Servirle</p>
                         </div>
                     </div>
                 </div>
