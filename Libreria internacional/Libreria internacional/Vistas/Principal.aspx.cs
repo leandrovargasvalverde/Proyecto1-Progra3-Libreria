@@ -28,6 +28,7 @@ namespace Libreria_internacional.Vistas
 
             Rep_Libros.DataSource = controladorLibros.Obtener_libros();
             Rep_Libros.DataBind();
+           
         }
     
         protected void Login_Click(object sender, EventArgs e)

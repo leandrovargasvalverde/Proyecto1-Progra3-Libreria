@@ -94,7 +94,7 @@
                                 <p class="card-text">ISBN: <%# Eval("Codigo") %></p>
                                 <strong class="card-text">Precio: ₡<%# Eval("Precio") %> / u</strong>
                                 <a style="float: left; margin-top: 10%" href="Mi_Carrito.aspx?Codigo=<%# Eval("ISBN") %>" class="btn btn-info">Añadir a mi carrito</a>
-                                <a style="float: left; margin-top: 10%; margin-left: 3%" href="Mis_Favoritos.aspx?Codigo=<%# Eval("ISBN") %>" class="btn btn-outline-info"><span>&#128153;</span></a>
+                                <a style="float: left; margin-top: 10%; margin-left: 3%" href="Guardar_favoritos.aspx?Codigo=<%# Eval("ISBN") %>" class="btn btn-outline-info"><span>&#128153;</span></a>
                             </div>
                         </div>
                     </ItemTemplate>

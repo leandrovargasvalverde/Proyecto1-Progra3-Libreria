@@ -90,6 +90,7 @@
     <Content Include="SQLScripts\SP Guardar Compras.sql" />
     <Content Include="SQLScripts\SP Obtener Compras.sql" />
     <Content Include="SQLScripts\SP Obtener Libros.sql" />
+    <Content Include="Vistas\Guardar_favoritos.aspx" />
     <Content Include="Vistas\Mis_Compras.aspx" />
     <Content Include="Vistas\Mis_Favoritos.aspx" />
     <Content Include="Vistas\Mi_Carrito.aspx" />
@@ -108,6 +109,13 @@
     <Compile Include="Modelos\Modelo_libros.cs" />
     <Compile Include="Modelos\Modelo_Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\Guardar_favoritos.aspx.cs">
+      <DependentUpon>Guardar_favoritos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Guardar_favoritos.aspx.designer.cs">
+      <DependentUpon>Guardar_favoritos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Mis_Compras.aspx.cs">
       <DependentUpon>Mis_Compras.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
