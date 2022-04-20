@@ -7,29 +7,14 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE PROCEDURE [dbo].[spGuardar_Favoritos]
-@ISBN int,
-@Titulo varchar(200),
-@Autor varchar(200),
-@Fecha_de_publicacion varchar(50),
-@Codigo varchar (100),
-@Precio money
+ALTER PROCEDURE [dbo].[spGuardar_Favoritos]
+@ISBN int
 
 AS
 BEGIN
 	INSERT INTO [dbo].[Tabla_Favoritos]
-           ([Foto]
-           ,[Titulo]
-           ,[Autor]
-           ,[Fecha_de_publicacion]
-		   ,[Codigo]
-           ,[Precio])
+           ([ISBN])
      VALUES
-           (@ISBN
-           ,@Titulo
-           ,@Autor
-           ,@Fecha_de_publicacion
-		   ,@Codigo
-           ,@Precio)
+           (@ISBN)
 END
 GO

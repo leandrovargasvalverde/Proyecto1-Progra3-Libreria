@@ -8,11 +8,6 @@ namespace Libreria_internacional.Modelos
     public class Modelo_Favoritos : Modelo_libros
     {
         public int ISBN { get; set; }
-        public string Foto { get; set; }
-        public string Titulo { get; set; }
-        public string Autor { get; set; }
-        public string Fecha_de_publicacion { get; set; }
-        public string Codigo { get; set; }
-        public double Precio { get; set; }
+
     }
 }

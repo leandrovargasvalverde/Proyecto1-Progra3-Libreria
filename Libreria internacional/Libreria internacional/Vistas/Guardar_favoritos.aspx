@@ -33,6 +33,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Contactenos</a>
                     </li>
+                    <li class="nav-item" id="Favoritos" runat="server">
+                        <a class="nav-link active" href="Mis_Favoritos.aspx">Mis Favoritos</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -53,14 +56,17 @@
                                 <h5 class="card-title"><%# Eval("Titulo") %></h5>
                                 <p class="card-text">Autor: <%# Eval("Autor") %></p>
                                 <p class="card-text">Fecha de publicacion: <%# Eval("Fecha_de_publicacion") %></p>
-                                <strong class="card-text">Precio: ₡<%# Eval("Precio") %> / p</strong>
-                                 <asp:Button ID="btnGuardarReservacion" runat="server" Text="Guardar Compra" PostBack="false"  class="btn btn-primary" />
-
+                                <strong class="card-text">Precio: ₡<%# Eval("Precio") %> / p</strong>&nbsp;&nbsp;&nbsp;
+                                 
                             </div>
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
-                
+                <div class="row mb-2">
+                    <div class="col mb-2">
+                        <asp:Button ID="btnGuardarFavorito" runat="server" Text="Guardar Favorito" PostBack="false" class="btn btn-info" OnClick="Btn_Guardar_Favorito_Click" />
+                    </div>
+                </div>
             </div>
         </div>
     </form>

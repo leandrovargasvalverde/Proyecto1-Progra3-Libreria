@@ -1,16 +1,13 @@
 USE [Base_Libros]
 GO
-
+/****** Object:  StoredProcedure [dbo].[spObtener_Favoritos]    Script Date: 20/04/2022 17:32:37 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE PROCEDURE [dbo].[spObtener_Favoritos] 
+ALTER PROCEDURE [dbo].[spObtener_Favoritos] 
 
---ALTER PROCEDURE [dbo].[spObtener_Favoritos]  
-@correo varchar(50)
 AS
 BEGIN
 	SELECT
@@ -20,9 +17,7 @@ BEGIN
 	j.Foto,
 	j.Codigo,
 	j.Titulo
-  FROM Tabla_Compras a
+  FROM Tabla_Favoritos a
   INNER JOIN Tabla_Libros j
-  ON j.ISBN = a.Codigo_Libro 
-	WHERE a.Correo =@correo
+  ON j.ISBN = a.ISBN 
 END
-GO

@@ -14,12 +14,6 @@ namespace Libreria_internacional.Controladores
         {
             List<SqlParameter> param = new List<SqlParameter>();
             param.Add(new SqlParameter("@ISBN", favoritos.ISBN));
-            param.Add(new SqlParameter("@Foto", favoritos.Foto));
-            param.Add(new SqlParameter("@Autor", favoritos.Autor));
-            param.Add(new SqlParameter("@Fecha_de_publicacion", favoritos.Fecha_de_publicacion));
-            param.Add(new SqlParameter("@Codigo", favoritos.Codigo));
-            param.Add(new SqlParameter("@Precio", favoritos.Precio));
-            param.Add(new SqlParameter("@Titulo", favoritos.Titulo));
 
             Conexion_base.executeQuery("spGuardar_Favoritos", param);
         }
@@ -27,9 +21,6 @@ namespace Libreria_internacional.Controladores
         {
             List<SqlParameter> param = new List<SqlParameter>();
             List<Modelo_Favoritos> Lista_Favoritos = new List<Modelo_Favoritos>();
-
-
-            param.Add(new SqlParameter("@correo", usuario.Email));
 
             DataTable dt = Conexion_base.fillDTStoreProcedure("spObtener_Favoritos", param);
             foreach (DataRow dr in dt.Rows)
