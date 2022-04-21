@@ -62,6 +62,7 @@
                                         <h5 class="card-title"><%# Eval("Titulo") %></h5>
                                         <p class="card-text">Autor: <%# Eval("Autor") %></p>
                                         <p class="card-text">Fecha de publicacion: <%# Eval("Fecha_de_publicacion") %></p>
+                                         <p class="card-text">ISBN: <%# Eval("Codigo") %></p>
                                         <strong class="card-text">Precio: ₡<%# Eval("Precio") %> / u</strong>
                                     </div>
                                 </div>
