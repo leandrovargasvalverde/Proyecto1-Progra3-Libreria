@@ -5,9 +5,8 @@ using System.Web;
 
 namespace Libreria_internacional.Modelos
 {
-    public class Modelo_Compras:Modelo_libros
+    public class Modelo_Compras : Modelo_libros
     {
-      
         public int ID { get; set; }
         public string Correo { get; set; }
         public int Cantidad_libros { get; set; }

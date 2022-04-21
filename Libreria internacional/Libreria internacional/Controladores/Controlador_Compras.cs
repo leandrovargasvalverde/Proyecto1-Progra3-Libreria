@@ -25,7 +25,7 @@ namespace Libreria_internacional.Controladores
         public void Guardar_Compras(Modelo_Compras compra)
         {
             List<SqlParameter> param = new List<SqlParameter>();
-           // param.Add(new SqlParameter("@Foto", compra.Foto));
+            // param.Add(new SqlParameter("@Foto", compra.Foto));
             param.Add(new SqlParameter("@Codigo_Libro", compra.ID));
             param.Add(new SqlParameter("@Correo", compra.Correo));
             param.Add(new SqlParameter("@Cantidad_libros", compra.Cantidad_libros));
@@ -44,15 +44,12 @@ namespace Libreria_internacional.Controladores
             param.Add(new SqlParameter("@Fecha_de_expiracion", compra.Fecha_de_expiracion));
             param.Add(new SqlParameter("@Codigo_de_seguridad", compra.Codigo_de_seguridad));
 
-
-
             Conexion_base.executeQuery("spGuardar_Compras", param);
         }
         public List<Modelo_Compras> obtenercompras(Modelo_Usuarios usuario)
         {
             List<SqlParameter> param = new List<SqlParameter>();
             List<Modelo_Compras> Lista_Compra = new List<Modelo_Compras>();
-
 
             param.Add(new SqlParameter("@correo", usuario.Email));
 
@@ -61,7 +58,7 @@ namespace Libreria_internacional.Controladores
             {
                 Modelo_Compras Compras = new Modelo_Compras()
                 {
-                    ID = Convert.ToInt16(dr["ID"]) ,
+                    ID = Convert.ToInt16(dr["ID"]),
                     Correo = dr["Correo"].ToString(),
                     Cantidad_libros = Convert.ToInt16(dr["Cantidad_libros"]),
                     Fecha_compra = Convert.ToDateTime(dr["Fecha_compra"]).ToShortDateString(),
@@ -70,27 +67,19 @@ namespace Libreria_internacional.Controladores
                     Monto_final = Convert.ToInt32(dr["Monto_final"]),
                     Monto_sin_IVA = Convert.ToInt32(dr["Monto_sin_IVA"]),
                     Monto_Unidad = Convert.ToInt32(dr["Monto_Unidad"]),
-                    Foto=dr["Foto"].ToString(),
-                    Titulo =dr["Titulo"].ToString(),
+                    Foto = dr["Foto"].ToString(),
+                    Titulo = dr["Titulo"].ToString(),
                     Nombre = dr["Nombre"].ToString(),
                     Pais = dr["Pais"].ToString(),
                     Estado = dr["Estado"].ToString(),
                     Codigo_postal = dr["Codigo_postal"].ToString(),
                     Direccion_de_entrega = dr["Direccion_de_entrega"].ToString(),
 
-
                 };
-       
- 
-   
 
                 Lista_Compra.Add(Compras);
             }
-
             return Lista_Compra;
-
         }
     }
 }
-
-       

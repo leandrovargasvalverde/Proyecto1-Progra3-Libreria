@@ -20,5 +20,3 @@ CREATE TABLE [dbo].[Tabla_Libros](
 	[Precio] [money] NULL
 ) ON [PRIMARY]
 GO
-
-

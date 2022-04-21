@@ -21,63 +21,63 @@
             position: absolute;
         }
     </style>
-    
-        <div class="container">
-            <div class="row align-items-stretch justify-content-between">
-                <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                    <div class="container-fluid">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                            <a class="navbar-brand" href="Principal.aspx">Libreria Internacional</a>
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                                <!-- <li class="nav-item">
+    <div class="container">
+        <div class="row align-items-stretch justify-content-between">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                        <a class="navbar-brand" href="Principal.aspx">Libreria Internacional</a>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                            <!-- <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="Principal.aspx">Inicio</a>
                                 </li>-->
 
-                                <!--<li class="nav-item">
+                            <!--<li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="Mi_Carrito.aspx">Mi carrito</a>
                         </li>-->
 
-                                <li class="nav-item" id="Reservaciones" runat="server" hidden="hidden">
-                                    <a class="nav-link active" href="Mis_Compras.aspx">Mis Compras</a>
-                                </li>
+                            <li class="nav-item" id="Reservaciones" runat="server" hidden="hidden">
+                                <a class="nav-link active" href="Mis_Compras.aspx">Mis Compras</a>
+                            </li>
 
-                                <li class="nav-item" id="Favoritos" runat="server" hidden="hidden">
-                                    <a class="nav-link active" href="Mis_Favoritos.aspx">Mis Favoritos</a>
-                                </li>
+                            <li class="nav-item" id="Favoritos" runat="server" hidden="hidden">
+                                <a class="nav-link active" href="Mis_Favoritos.aspx">Mis Favoritos</a>
+                            </li>
 
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Contactenos</a>
-                                </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Contactenos</a>
+                            </li>
 
-                                <li class="nav-item">
-                                    <a class="nav-link active" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Iniciar sesion</a>
-                                </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Iniciar sesion</a>
+                            </li>
 
-                                <li class="nav-item" id="CerrarSesion" runat="server" hidden="hidden">
-                                    <a class="nav-link active" runat="server" onserverclick="CerrarSesion_Click">Cerrar sesion</a>
-                                </li>
-                            </ul>   
-                                                                
-                         </div>                      
-                        </div>
-                </nav>
-            </div>
+                            <li class="nav-item" id="CerrarSesion" runat="server" hidden="hidden">
+                                <a class="nav-link active" runat="server" onserverclick="CerrarSesion_Click">Cerrar sesion</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
         </div>
-        <br />
-        <br />
-        <div id="divAlert" hidden="hidden" role="alert" runat="server">
-            <label id="lblAlert" runat="server"></label>
-        </div>
-        
-        <div align="center">
-            <img src="../Assets/Imagenes/logo.png" />
-        </div>
-        <form id="form1" runat="server">
-           
+    </div>
+    <br />
+    <br />
+    <div id="divAlert" hidden="hidden" role="alert" runat="server">
+        <label id="lblAlert" runat="server"></label>
+    </div>
+
+    <div align="center">
+        <img src="../Assets/Imagenes/logo.png" />
+    </div>
+    <form id="form1" runat="server">
+
         <div class="container-fluid ml-3" style="margin-top: 0,5%">
             <div class="row">
                 <asp:Repeater ID="Rep_Libros" runat="server">

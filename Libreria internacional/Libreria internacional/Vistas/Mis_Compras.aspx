@@ -48,7 +48,7 @@
         </div>
         <div style="margin-top: 2%; margin-left: 1%">
             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Vaciar compras
+                Vaciar Compras
             </button>
         </div>
         <div class="container-fluid ml-3" style="margin-top: 1%">
@@ -77,24 +77,7 @@
                                         <p style="font-size: small" class="card-text">Estado:  <%# Eval("Estado") %></p>
                                         <p style="font-size: small" class="card-text">Direccion de entrega:  <%# Eval("Direccion_de_entrega") %></p>
                                         <p style="font-size: small" class="card-text">Codigo postal:  <%# Eval("Codigo_postal") %></p>
-                                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                                            Cancelar
-                                        </button>
-                                        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel1">¿Desea vaciar el carrito?</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                    </div>
-
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                                                        <a href="Servicio_eliminar_compra.aspx?ID=<%# Eval("ID") %>" class="btn btn-dark">Sí</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <a href="Servicio_eliminar_compra.aspx?ID=<%# Eval("ID") %>" class="btn btn-dark">Cancelar</a>
                                     </div>
                                 </div>
                             </div>
@@ -119,9 +102,6 @@
                 </div>
             </div>
         </div>
-
-
-
     </form>
 </body>
 </html>

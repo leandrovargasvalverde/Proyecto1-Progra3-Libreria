@@ -95,7 +95,7 @@
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
-                <div class="card" style="width: 30rem; height: 68rem; margin-left: 2%">
+                <div class="card" style="width: 30rem; height: 65rem; margin-left: 2%">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
@@ -193,7 +193,7 @@
                             </div>
                             <div class="row mb-2">
                                 <div class="input-group mb-3">
-                                    <input runat="server" id="txt_Codigo_de_seguridad" type="text" class="form-control" placeholder="Codigo de seguridad" />
+                                    <input runat="server" id="txt_Codigo_de_seguridad" type="password" class="form-control" placeholder="Codigo de seguridad" />
                                 </div>
                             </div>
 
@@ -212,8 +212,5 @@
             </div>
         </div>
     </form>
-
-
-
 </body>
 </html>

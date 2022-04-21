@@ -53,6 +53,7 @@
                         <div class="card" style="max-width: 20%; height: 5%; margin-right: 2%; margin-left: 2%">
                             <img src="<%# Eval("Foto") %>" class="card-img-top" style="margin-top: 3%" />
                             <div class="card-body">
+
                                 <h5 class="card-title"><%# Eval("Titulo") %></h5>
                                 <p class="card-text">Autor: <%# Eval("Autor") %></p>
                                 <p class="card-text">Fecha de publicacion: <%# Eval("Fecha_de_publicacion") %></p>
@@ -62,7 +63,7 @@
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
-                <div class="row mb-2" style="margin-left:0.7%">
+                <div class="row mb-2" style="margin-left: 0.7%">
                     <div class="col mb-2">
                         <asp:Button ID="btnGuardarFavorito" runat="server" Text="Guardar Favorito" PostBack="false" class="btn btn-info" OnClick="Btn_Guardar_Favorito_Click" />
                     </div>
@@ -70,8 +71,5 @@
             </div>
         </div>
     </form>
-
-
-
 </body>
 </html>

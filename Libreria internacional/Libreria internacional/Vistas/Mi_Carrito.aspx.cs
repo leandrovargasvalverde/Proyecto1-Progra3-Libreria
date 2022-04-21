@@ -63,11 +63,11 @@ namespace Libreria_internacional.Vistas
                 MostrarAlert("Error al realizar la compra", "danger");
 
             }
-         
+
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
             if ((Modelos.Modelo_Usuarios)Session["Login"] != null)
             {
                 if (!IsPostBack)
@@ -88,7 +88,7 @@ namespace Libreria_internacional.Vistas
                     dt_Llegad_Compra.Value = DateTime.Now.AddDays(30).ToString("yyyy-MM-dd");
                     intLibros.Value = "1";
 
-                    
+
 
                     Rep_Carrito.DataSource = lista_libros;
                     Rep_Carrito.DataBind();

@@ -85,11 +85,17 @@
     <Content Include="Assets\Imagenes\fondo.jpg" />
     <Content Include="Assets\Imagenes\logo.png" />
     <Content Include="SQLScripts\Crear tabla Compras.sql" />
+    <Content Include="SQLScripts\Crear Tabla Favoritos.sql" />
     <Content Include="SQLScripts\Crear tabla Libros.sql" />
     <Content Include="SQLScripts\Insertar Libros.sql" />
+    <Content Include="SQLScripts\SP Eliminar Compra.sql" />
     <Content Include="SQLScripts\SP Guardar Compras.sql" />
+    <Content Include="SQLScripts\SP Guardar Favoritos.sql" />
     <Content Include="SQLScripts\SP Obtener Compras.sql" />
+    <Content Include="SQLScripts\SP Obtener Favoritos.sql" />
     <Content Include="SQLScripts\SP Obtener Libros.sql" />
+    <Content Include="SQLScripts\SP Vaciar Carrito.sql" />
+    <Content Include="SQLScripts\SP Vaciar Favoritos.sql" />
     <Content Include="Vistas\Guardar_favoritos.aspx" />
     <Content Include="Vistas\Mis_Compras.aspx" />
     <Content Include="Vistas\Mis_Favoritos.aspx" />

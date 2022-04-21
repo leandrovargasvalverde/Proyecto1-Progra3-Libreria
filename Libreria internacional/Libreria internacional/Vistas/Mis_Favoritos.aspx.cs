@@ -40,7 +40,7 @@ namespace Libreria_internacional.Vistas
 
                 modelo.Modelo_Favoritos favoritos = new modelo.Modelo_Favoritos()
                 {
-                    
+
                 };
                 controlador.Controlador_Favoritos favoritos1 = new controlador.Controlador_Favoritos();
                 favoritos1.Guardar_Favoritos(favoritos);

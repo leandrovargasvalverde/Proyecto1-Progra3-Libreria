@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
-using System.Web;
 using Libreria_internacional.Modelos;
 
 namespace Libreria_internacional.Controladores
@@ -16,7 +15,7 @@ namespace Libreria_internacional.Controladores
         //Apikey Jose: "AIzaSyBihpSV3YmGWIjLrbOzjEShaZfaA08Cr5M";
 
         const string firebaseUrl = "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=";
-        const string apiKey = "AIzaSyABqEs1pV-Jdgyio1SVy0yPo7tkFyOtnRo";
+        const string apiKey = "AIzaSyAT2RiFOdxrH_4u6qxilYARXTXcXHmTrM0";
 
         public bool Login(Modelo_Usuarios usuario)
         {

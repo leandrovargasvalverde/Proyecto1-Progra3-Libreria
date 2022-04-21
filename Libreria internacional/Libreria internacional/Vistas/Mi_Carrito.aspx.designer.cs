@@ -183,7 +183,7 @@ namespace Libreria_internacional.Vistas
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txt_Codigo_de_seguridad;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txt_Codigo_de_seguridad;
 
         /// <summary>
         /// Control btnGuardarReservacion.
