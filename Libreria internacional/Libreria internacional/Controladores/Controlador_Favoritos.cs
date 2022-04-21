@@ -10,6 +10,11 @@ namespace Libreria_internacional.Controladores
 {
     public class Controlador_Favoritos
     {
+        public void Vaciar_Favoritos()
+        {
+            Conexion_base.executeQuery("spVaciar_Favoritos", null);
+
+        }
         public void Guardar_Favoritos(Modelo_Favoritos favoritos)
         {
             List<SqlParameter> param = new List<SqlParameter>();

@@ -18,7 +18,6 @@ namespace Libreria_internacional.Vistas
             Compras.Cancelar_Compras(ID);
 
             Response.Redirect("Mis_Compras.aspx");
-
         }
     }
 }

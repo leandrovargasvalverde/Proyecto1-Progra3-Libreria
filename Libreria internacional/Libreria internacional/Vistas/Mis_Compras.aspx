@@ -42,8 +42,14 @@
         </nav>
         <br />
         <br />
-        <asp:Button ID="btnVaciarCarrito" runat="server" Text="Vaciar Carrito" PostBack="false"  class="btn btn-primary" OnClick="Btn_VaciarCarrito"/>
-        <div class="container-fluid ml-3" style="margin-top: 2%">
+
+        <div id="divAlert" hidden="hidden" role="alert" runat="server">
+            <label id="lblAlert" runat="server"></label>
+        </div>
+        <div style="margin-top: 2%; margin-left: 1%">
+            <asp:Button ID="btnVaciarCarrito" runat="server" Text="Vaciar Carrito" PostBack="true" class="btn btn-danger" OnClick="Btn_VaciarCarrito" />
+        </div>
+        <div class="container-fluid ml-3" style="margin-top: 1%">
             <div class="row">
                 <asp:Repeater ID="Rep_Compras" runat="server">
                     <ItemTemplate>
@@ -69,7 +75,7 @@
                                         <p style="font-size: small" class="card-text">Estado:  <%# Eval("Estado") %></p>
                                         <p style="font-size: small" class="card-text">Direccion de entrega:  <%# Eval("Direccion_de_entrega") %></p>
                                         <p style="font-size: small" class="card-text">Codigo postal:  <%# Eval("Codigo_postal") %></p>
-                                        <a href="Servicio_eliminar_compra.aspx?ID=<%# Eval("ID") %>">Cancelar</a>
+                                        <a href="Servicio_eliminar_compra.aspx?ID=<%# Eval("ID") %>" class="btn btn-dark">Cancelar</a>
                                     </div>
                                 </div>
                             </div>

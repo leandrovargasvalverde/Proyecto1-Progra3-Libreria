@@ -62,7 +62,7 @@
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
-                <div class="row mb-2">
+                <div class="row mb-2" style="margin-left:0.7%">
                     <div class="col mb-2">
                         <asp:Button ID="btnGuardarFavorito" runat="server" Text="Guardar Favorito" PostBack="false" class="btn btn-info" OnClick="Btn_Guardar_Favorito_Click" />
                     </div>

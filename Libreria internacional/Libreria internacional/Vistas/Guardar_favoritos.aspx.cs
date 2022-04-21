@@ -30,7 +30,7 @@ namespace Libreria_internacional.Vistas
                 };
                 controlador.Controlador_Favoritos favoritos = new controlador.Controlador_Favoritos();
                 favoritos.Guardar_Favoritos(Favoritos);
-                MostrarAlert("Favorito Agredado", "info");
+                MostrarAlert("Favorito Agregado Correctamente", "info");
             }
             catch
             {

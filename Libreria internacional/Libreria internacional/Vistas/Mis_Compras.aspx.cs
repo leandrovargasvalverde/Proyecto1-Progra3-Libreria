@@ -32,6 +32,13 @@ namespace Libreria_internacional.Vistas
 
             controladorCompras.Vaciar_Carrito();
             Rep_Compras.DataBind();
-        }     
+            MostrarAlert("Se vacio el carrito de Compras", "danger");
+        }
+        public void MostrarAlert(string mensaje, string tipoMensaje)
+        {
+            divAlert.Attributes.Add("class", "alert alert-" + tipoMensaje);
+            divAlert.Attributes.Remove("hidden");
+            lblAlert.InnerText = mensaje;
+        }
     }
 }

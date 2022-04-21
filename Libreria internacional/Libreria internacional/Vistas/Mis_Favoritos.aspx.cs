@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Controlador = Libreria_internacional.Controladores;
 
 namespace Libreria_internacional.Vistas
 {
@@ -51,6 +52,14 @@ namespace Libreria_internacional.Vistas
                 MostrarAlert("Error al guardar el libro como favorito", "danger");
 
             }
+        }
+        protected void Btn_VaciarFavoritos(object sender, EventArgs e)
+        {
+            Controlador.Controlador_Favoritos controladorFavoritos = new Controlador.Controlador_Favoritos();
+
+            controladorFavoritos.Vaciar_Favoritos();
+            Rep_Favoritos.DataBind();
+            MostrarAlert("Se vacio la lista de Favoritos", "info");
         }
 
         public void MostrarAlert(string mensaje, string tipoMensaje)

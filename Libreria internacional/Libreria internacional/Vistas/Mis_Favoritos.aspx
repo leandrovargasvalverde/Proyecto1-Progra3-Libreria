@@ -40,12 +40,16 @@
                 </div>
             </div>
         </nav>
+        <br />
+        <br />
 
         <div id="divAlert" hidden="hidden" role="alert" runat="server">
             <label id="lblAlert" runat="server"></label>
         </div>
-
-        <div class="container-fluid ml-3" style="margin-top: 5%">
+        <div style="margin-top: 2%; margin-left: 1%">
+            <asp:Button ID="btnVaciarFavoritos" runat="server" Text="Vaciar Favoritos" PostBack="true" class="btn btn-danger" OnClick="Btn_VaciarFavoritos" />
+        </div>
+        <div class="container-fluid ml-3" style="margin-top: 1%; margin-left:1%">
             <div class="row">
                 <asp:Repeater ID="Rep_Favoritos" runat="server">
                     <ItemTemplate>
