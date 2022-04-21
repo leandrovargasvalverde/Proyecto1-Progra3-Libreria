@@ -6,7 +6,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-ALTER PROCEDURE [dbo].[spObtener_Favoritos] 
+CREATE PROCEDURE [dbo].[spObtener_Favoritos] 
 
 AS
 BEGIN

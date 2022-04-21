@@ -7,7 +7,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-ALTER PROCEDURE [dbo].[spGuardar_Favoritos]
+CREATE PROCEDURE [dbo].[spGuardar_Favoritos]
 @ISBN int
 
 AS
