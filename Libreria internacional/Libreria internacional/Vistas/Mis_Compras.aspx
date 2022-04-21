@@ -47,7 +47,9 @@
             <label id="lblAlert" runat="server"></label>
         </div>
         <div style="margin-top: 2%; margin-left: 1%">
-            <asp:Button ID="btnVaciarCarrito" runat="server" Text="Vaciar Carrito" PostBack="true" class="btn btn-danger" OnClick="Btn_VaciarCarrito" />
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Vaciar compras
+            </button>
         </div>
         <div class="container-fluid ml-3" style="margin-top: 1%">
             <div class="row">
@@ -75,15 +77,51 @@
                                         <p style="font-size: small" class="card-text">Estado:  <%# Eval("Estado") %></p>
                                         <p style="font-size: small" class="card-text">Direccion de entrega:  <%# Eval("Direccion_de_entrega") %></p>
                                         <p style="font-size: small" class="card-text">Codigo postal:  <%# Eval("Codigo_postal") %></p>
-                                        <a href="Servicio_eliminar_compra.aspx?ID=<%# Eval("ID") %>" class="btn btn-dark">Cancelar</a>
+                                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                            Cancelar
+                                        </button>
+                                        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel1">¿Desea vaciar el carrito?</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                                                        <a href="Servicio_eliminar_compra.aspx?ID=<%# Eval("ID") %>" class="btn btn-dark">Sí</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </ItemTemplate>
                 </asp:Repeater>
             </div>
         </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">¿Desea vaciar el carrito?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                        <asp:Button ID="btnVaciarCarrito1" runat="server" Text="Sí" PostBack="true" class="btn btn-danger" OnClick="Btn_VaciarCarrito" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
     </form>
 </body>
 </html>

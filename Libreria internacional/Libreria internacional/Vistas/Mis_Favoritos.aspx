@@ -47,7 +47,10 @@
             <label id="lblAlert" runat="server"></label>
         </div>
         <div style="margin-top: 2%; margin-left: 1%">
-            <asp:Button ID="btnVaciarFavoritos" runat="server" Text="Vaciar Favoritos" PostBack="true" class="btn btn-danger" OnClick="Btn_VaciarFavoritos" />
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Vaciar favoritos
+            </button>
+
         </div>
         <div class="container-fluid ml-3" style="margin-top: 1%; margin-left:1%">
             <div class="row">
@@ -71,6 +74,23 @@
 
                     </ItemTemplate>
                 </asp:Repeater>
+            </div>
+        </div>
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">¿Desea vaciar favoritos?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                        <asp:Button ID="btnVaciarFavoritos" runat="server" Text="Sí" PostBack="true" class="btn btn-danger" OnClick="Btn_VaciarFavoritos" />
+                    </div>
+                </div>
             </div>
         </div>
     </form>

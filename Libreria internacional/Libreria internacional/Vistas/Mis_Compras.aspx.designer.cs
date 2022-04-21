@@ -42,15 +42,6 @@ namespace Libreria_internacional.Vistas
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblAlert;
 
         /// <summary>
-        /// Control btnVaciarCarrito.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVaciarCarrito;
-
-        /// <summary>
         /// Control Rep_Compras.
         /// </summary>
         /// <remarks>
@@ -58,5 +49,14 @@ namespace Libreria_internacional.Vistas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater Rep_Compras;
+
+        /// <summary>
+        /// Control btnVaciarCarrito1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnVaciarCarrito1;
     }
 }
