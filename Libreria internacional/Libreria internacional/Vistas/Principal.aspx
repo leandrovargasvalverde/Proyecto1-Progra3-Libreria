@@ -33,24 +33,12 @@
                         <a class="navbar-brand" href="Principal.aspx">Libreria Internacional</a>
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                            <!-- <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="Principal.aspx">Inicio</a>
-                                </li>-->
-
-                            <!--<li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Mi_Carrito.aspx">Mi carrito</a>
-                        </li>-->
-
                             <li class="nav-item" id="Reservaciones" runat="server" hidden="hidden">
                                 <a class="nav-link active" href="Mis_Compras.aspx">Mis Compras</a>
                             </li>
 
                             <li class="nav-item" id="Favoritos" runat="server" hidden="hidden">
                                 <a class="nav-link active" href="Mis_Favoritos.aspx">Mis Favoritos</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Contactenos</a>
                             </li>
 
                             <li class="nav-item">
