@@ -42,6 +42,7 @@
         </nav>
         <br />
         <br />
+        <asp:Button ID="btnVaciarCarrito" runat="server" Text="Vaciar Carrito" PostBack="false"  class="btn btn-primary" OnClick="Btn_VaciarCarrito"/>
         <div class="container-fluid ml-3" style="margin-top: 2%">
             <div class="row">
                 <asp:Repeater ID="Rep_Compras" runat="server">

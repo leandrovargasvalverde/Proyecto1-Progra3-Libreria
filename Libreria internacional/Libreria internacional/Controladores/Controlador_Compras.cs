@@ -17,6 +17,11 @@ namespace Libreria_internacional.Controladores
             Conexion_base.executeQuery("[spEliminar_Compras]", param);
         }
 
+        public void Vaciar_Carrito()
+        {
+            Conexion_base.executeQuery("spVaciar_Carrito", null);
+
+        }
         public void Guardar_Compras(Modelo_Compras compra)
         {
             List<SqlParameter> param = new List<SqlParameter>();

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Controlador = Libreria_internacional.Controladores;
 
 namespace Libreria_internacional.Vistas
 {
@@ -25,6 +26,12 @@ namespace Libreria_internacional.Vistas
             }
 
         }
+        protected void Btn_VaciarCarrito(object sender, EventArgs e)
+        {
+            Controlador.Controlador_Compras controladorCompras = new Controlador.Controlador_Compras();
 
+            controladorCompras.Vaciar_Carrito();
+            Rep_Compras.DataBind();
+        }     
     }
 }

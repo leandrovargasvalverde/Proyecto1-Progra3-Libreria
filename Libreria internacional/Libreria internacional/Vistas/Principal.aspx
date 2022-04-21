@@ -21,7 +21,7 @@
             position: absolute;
         }
     </style>
-
+    
         <div class="container">
             <div class="row align-items-stretch justify-content-between">
                 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -61,11 +61,7 @@
                                     <a class="nav-link active" runat="server" onserverclick="CerrarSesion_Click">Cerrar sesion</a>
                                 </li>
                             </ul>   
-
-                           <form id="form2" class="d-flex">
-                                <input class="form-control me-2" type="text" placeholder="Filtro" aria-label="Search" style="width: 70%"./>
-                                <button class="btn btn-info" type="submit" href="FiltroLibro.aspx?Titulo=<%# Eval("Titulo") %>">Buscar</button>
-                           </form>                                        
+                                                                
                          </div>                      
                         </div>
                 </nav>
@@ -81,6 +77,10 @@
             <img src="../Assets/Imagenes/logo.png" />
         </div>
         <form id="form1" runat="server">
+            <div class="d-flex" runat="server">
+                                <input class="form-control me-2" id="txt_Buscar" type="text" placeholder="Filtro" aria-label="Search" style="width: 70%"./>
+                                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" PostBack="false"  class="btn btn-info" />
+                           </div> 
         <div class="container-fluid ml-3" style="margin-top: 0,5%">
             <div class="row">
                 <asp:Repeater ID="Rep_Libros" runat="server">
